@@ -10,7 +10,7 @@ class Genre(models.Model):
     
 
 class Gear(models.Model):
-    sku = models.CharField(max_length=100)
+    sku = models.CharField(max_length=100, unique=True)
     asn = models.CharField(max_length=100, null = True, blank = True)
     category = models.CharField(max_length=100, null = True, blank = True)
     online = models.BooleanField(null = True, blank = True)
@@ -41,5 +41,6 @@ class Artist(models.Model):
     name = models.CharField(max_length=100)
     genre = models.ForeignKey(Genre, related_name='artists', on_delete=models.CASCADE)
     products = models.ForeignKey(Gear, related_name='uses', null=True, on_delete=models.SET_NULL)
+    band = models.CharField(max_length=100, null = True, blank = True)
     def __str__(self):
         return self.name
