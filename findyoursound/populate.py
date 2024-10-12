@@ -28,7 +28,23 @@ def addArtist():
     pass
 
 def addGenre():
-    pass
+    genres= [
+        {
+            'name': 'Rock'
+        },
+        {
+            'name': 'Pop'
+        },
+        {
+            'name': 'Classical'
+        },
+        {
+            'name': 'Jazz'
+        }
+
+    ]
+    for genre in genres:
+        Genre.objects.get_or_create(**genre)
     
     
     
