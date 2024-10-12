@@ -18,7 +18,7 @@ def getJSON():
 
 def populate():
     addGear(getJSON())
-        
+    addGenre()
         
 def addGear(data):
     for row in data:
@@ -45,8 +45,6 @@ def addGenre():
     ]
     for genre in genres:
         Genre.objects.get_or_create(**genre)
-    
-    
     
     
     
