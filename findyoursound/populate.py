@@ -47,7 +47,6 @@ def getJSON():
     "title",
     "brand_name",
     "description",
-    "productDetail",
     "price",
     "picture_main",
     "quantity_in_stock",
@@ -64,6 +63,7 @@ def getJSON():
     ]
 
     for i in range(0, len(json_data)):
+        del json_data[i]['ProductDetail']
         for j in range(0, len(oldFieldNames)):
             json_data[i][newFieldNames[j]] = json_data[i][oldFieldNames[j]]
             del json_data[i][oldFieldNames[j]]
