@@ -35,7 +35,7 @@ class Gear(models.Model):
     #If the 3 store stock quantities are 0, but there’s still some in QtyInStock, we just have some in the warehouse.
 
     def __str__(self):
-        return self.name
+        return self.sku
 
 class Artist(models.Model):
     name = models.CharField(max_length=100)
