@@ -17,7 +17,7 @@ def getJSON():
     return json_data
 
 def populate():
-    addGear(getJSON())
+    #addGear(getJSON())
     addGenre()
         
 def addGear(data):
