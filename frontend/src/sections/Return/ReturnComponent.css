@@ -11,7 +11,13 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
+    transition: 250ms ease-in-out;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.return-div:hover {
+    transform: scale(1.05);
 }
 
 .guitar-image {
@@ -23,10 +29,12 @@
 .guitar-text {
     text-align: left;
     padding: 20px;
+    color: orange;
 }
 
 .guitar-description {
     padding-top: 10px;
+    color: #282c34;
 }
 
 .next-button {

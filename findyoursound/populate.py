@@ -81,9 +81,51 @@ def addGear(data):
 
     for row in data:
         Gear.objects.get_or_create(**row)
+        
+        """image
+        title
+        price"""
+        
+    extras = [
+        {
+            'sku' : '180430326802008',
+            'item_name' : 'Fender Player Stratocaster Buttercream Maple Fingerboard',
+            'price' : "659.00",
+            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/180430326802008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
+        },
+    ]
+    
+    for row in extras:
+        Gear.objects.get_or_create(**row)
+        
+    
+    
+        
+    
+        
+    
 
 def addArtist():
-    pass
+    
+    artists = [
+        {
+            'name' : 'The Smashing Pumpkins',
+            'genre' : Genre.objects.get(name = "Rock"),
+            'products' : Gear.objects.get(sku = "180430326802008")
+        }#,
+        # {
+        #     'name' : 'Taylor Swift'
+        # },
+        # {
+        #     'name' : 'John Williams'
+        # },
+        # {
+        #     'name' : 'Lewis Tough'
+        # }
+    ]
+    for artist in artists:
+        Artist.objects.get_or_create(**artist)
 
 def addGenre():
     genres= [
@@ -109,5 +151,5 @@ def addGenre():
 
     
 if __name__ == '__main__':
-    print('Starting Rango population script...')
+    print('Starting Django population script...')
     populate()

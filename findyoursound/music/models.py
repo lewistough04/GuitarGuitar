@@ -35,11 +35,12 @@ class Gear(models.Model):
     #If the 3 store stock quantities are 0, but there’s still some in QtyInStock, we just have some in the warehouse.
 
     def __str__(self):
-        return self.name
+        return self.sku
 
 class Artist(models.Model):
     name = models.CharField(max_length=100)
     genre = models.ForeignKey(Genre, related_name='artists', on_delete=models.CASCADE)
     products = models.ForeignKey(Gear, related_name='uses', null=True, on_delete=models.SET_NULL)
+    band = models.CharField(max_length=100, null = True, blank = True)
     def __str__(self):
         return self.name
