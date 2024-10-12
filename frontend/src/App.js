@@ -1,5 +1,6 @@
-import logo from './media/long-logo.png'
+import logo from './assets/media/long-logo.png'
 import './App.css';
+import SurveyComponent from './sections/Survey/SurveyComponent';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           Go To Guitar Guitar!
         </a>
       </header>
+      <SurveyComponent/>
     </div>
   );
 }
