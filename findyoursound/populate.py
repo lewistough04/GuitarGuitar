@@ -82,27 +82,48 @@ def addGear(data):
     for row in data:
         Gear.objects.get_or_create(**row)
         
-        """image
+        """need:
+        image
         title
         price"""
         
     extras = [
         {
-            'sku' : '180430326802008',
+            'sku' : '180430326802008', # Billy from Smashing Pumpkins
             'item_name' : 'Fender Player Stratocaster Buttercream Maple Fingerboard',
             'price' : "659.00",
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/180430326802008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
+        },{
+            'sku' : '04122311202218', # Billy from Smashing Pumpkins
+            'item_name' : 'Electro Harmonix Big Muff Pi',
+            'price' : "89.00",
+            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/04122311202218f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
+        },{
+            'sku' : '190718346269008', # Taylor Swift Guitar
+            'item_name' : 'Taylor Taylor Swift Baby Taylor (TSBT) Signature',
+            'price' : "325.00",
+            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/190718346269008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
+        },{
+            'sku' : '180430326802008', # classical guitar
+            'item_name' : 'Yamaha C40 Classical Guitar',
+            'price' : "129.00",
+            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/130/09071411013328f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
+        },{
+            'sku' : '240717426967008', # jazz guitar
+            'item_name' : 'Ibanez PM3C Pat Metheny Signature Natural Amber Low Gloss',
+            'price' : "1399.00",
+            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/240717426967008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
         },
+        
     ]
     
     for row in extras:
         Gear.objects.get_or_create(**row)
-        
-    
-    
-        
-    
         
     
 
@@ -113,16 +134,22 @@ def addArtist():
             'name' : 'The Smashing Pumpkins',
             'genre' : Genre.objects.get(name = "Rock"),
             'products' : Gear.objects.get(sku = "180430326802008")
-        }#,
-        # {
-        #     'name' : 'Taylor Swift'
-        # },
-        # {
-        #     'name' : 'John Williams'
-        # },
-        # {
-        #     'name' : 'Lewis Tough'
-        # }
+        },
+        {
+            'name' : 'Taylor Swift',
+            'genre' : Genre.objects.get(name = "Pop"),
+            'products' : Gear.objects.get(sku = "190718346269008")
+        },
+        {
+            'name' : 'John Williams',
+            'genre' : Genre.objects.get(name = "Classical"),
+            'products' : Gear.objects.get(sku = "180430326802008")
+        },
+        {
+            'name' : 'Pat Metheny',
+            'genre' : Genre.objects.get(name = "Jazz"),
+            'products' : Gear.objects.get(sku = "240717426967008")
+        }
     ]
     for artist in artists:
         Artist.objects.get_or_create(**artist)
