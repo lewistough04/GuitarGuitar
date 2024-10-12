@@ -26,7 +26,7 @@ class Gear(models.Model):
     color_option = models.IntegerField(null = True, blank = True)
     pickup_option = models.IntegerField(null = True, blank = True)
     shape_option = models.IntegerField(null = True, blank = True)
-    created_at = models.DateTimeField(null = True, blank = True)    #Date and time of the product added to guitar guitar api database
+    created_at = models.TextField(null = True, blank = True)    #Date and time of the product added to guitar guitar api database
     image_urls = models.TextField(null = True, blank = True)
     rating = models.FloatField(null = True, blank = True)
     glasgow_quantity = models.IntegerField(null = True, blank = True)
