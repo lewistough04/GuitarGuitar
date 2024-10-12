@@ -1,31 +1,41 @@
 import "./GenreComponent.css"
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 function GenreComponent({ onNext }){
 
-    const [genres, setGenres] = useState(["Rock & Roll", "Pop", "Country", "Acid-House"]);
+    const [genres, setGenres] = useState([]);
     const [selectedGenre, setSelectedGenre] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchGenres = async () => {
-            const response = await Axios.get('http://localhost:8000/api/genres/');
-            setGenres(response.data);
+            try {
+                const response = await Axios.get('http://localhost:8000/api/genres/');
+                setGenres(response.data);
+            } catch (error) {
+                console.error("Error fetching genres:", error);
+            }
         };
 
         fetchGenres();
     }, []);
 
-    function handleGenreChange(genre){
+    const handleGenreChange = (genre) => {
         setSelectedGenre(genre);
         console.log("Selected genre: ", genre);
     }
 
     const handleNext = async () => {
         if (selectedGenre) {
-            const response = await Axios.post('http://localhost:8000/api/artists/', { name: selectedGenre });
-            console.log('PUT response:', response.data);
-            onNext();
+            try {
+                const response = await Axios.post('http://localhost:8000/api/artists/', { genre: selectedGenre });
+                console.log('POST response:', response.data);
+                navigate('/artists', { state: { artists: response.data } });
+            } catch (error) {
+                console.error("Error posting genre:", error);
+            }
         } else {
             console.log("No genre selected.");
         }
@@ -35,18 +45,17 @@ function GenreComponent({ onNext }){
         <div className="main-div">
             <h1 className="survey-title">What is your favourite genre!</h1>
             <ul className="genres-list">
-            {genres.map((genre, index) => (
-                <li key={index}> 
-                    <button className={`genre-button ${selectedGenre === genre.name ? 'selected' : ''}`}
-                            onClick={() => handleGenreChange(genre.name)}>
-                        {genre.name}
-                    </button>
-                </li>
-            ))}
+                {genres.map((genre, index) => (
+                    <li key={index}> 
+                        <button className={`genre-button ${selectedGenre === genre ? 'selected' : ''}`}
+                                onClick={() => handleGenreChange(genre)}>
+                            {genre}
+                        </button>
+                    </li>
+                ))}
             </ul>
             <div className="button-container">
-                <button className="button prev-page" onClick={onNext}>Go Back</button>
-                <button className="button next-page" onClick={handleNext}>Next</button>
+                <button className="next-page" onClick={handleNext}>Next</button>
             </div>
         </div>
     );
