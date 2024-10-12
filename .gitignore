@@ -19,7 +19,7 @@ __pycache__/
 *.pyd
 *.sqlite3
 db.sqlite3
-
+/findyoursound/db.sqlite3
 # If you are using SQLite3 database files
 *.sqlite3
 
