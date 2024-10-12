@@ -22,19 +22,19 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-Virtual environment
+# Virtual environment
 venv/
 env/
 ENV/
 .venv/
 .ENV/
 
-Python cache files
+# Python cache files
 pycache/
 *.py[cod]
 *$py.class
 
-Django stuff:
+# Django stuff:
 *.log
 *.pot
 *.pyc
@@ -43,39 +43,101 @@ Django stuff:
 *.sqlite3
 db.sqlite3
 
-If you are using SQLite3 database files
+# If you are using SQLite3 database files
 *.sqlite3
 
-If you are using Django migrations
+# If you are using Django migrations
 /migrations/
 
-If you are using static files
+# If you are using static files
 staticfiles/
 static/
 
-If you are using media files
+# If you are using media files
 media/
 
-If you are using local settings
+# If you are using local settings
 local_settings.py
 
-If you are using coverage reports
+# If you are using coverage reports
 htmlcov/
 .coverage
 .tox/
 .nox/
 
-If you are using Jupyter Notebook
+# If you are using Jupyter Notebook
 .ipynb_checkpoints
 
-If you are using PyCharm
+# If you are using PyCharm
 .idea/
 
-If you are using VS Code
+# If you are using VS Code
 .vscode/
 
-If you are using macOS
+# If you are using macOS
 .DS_Store
 
-If you are using Windows
+# If you are using Windows
 Thumbs.db
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+/venv/
+
+# Python cache files
+__pycache__
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+/findyoursound/db.sqlite3
+# If you are using SQLite3 database files
+*.sqlite3
+
+# If you are using Django migrations
+*/migrations/*
+
+# If you are using static files
+staticfiles/
+static/
+
+# If you are using media files
+media/
+
+# If you are using local settings
+local_settings.py
+
+# If you are using coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# If you are using Jupyter Notebook
+.ipynb_checkpoints
+
+# If you are using PyCharm
+.idea/
+
+# If you are using VS Code
+.vscode/
+
+# If you are using macOS
+.DS_Store
+
+# If you are using Windows
+Thumbs.db
+
+# migrations
+migrations/

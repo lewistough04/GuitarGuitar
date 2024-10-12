@@ -7,7 +7,7 @@ ENV/
 /venv/
 
 # Python cache files
-__pycache__/
+__pycache__
 *.py[cod]
 *$py.class
 
@@ -56,3 +56,6 @@ htmlcov/
 
 # If you are using Windows
 Thumbs.db
+
+# migrations
+migrations/
