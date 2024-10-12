@@ -1,6 +1,9 @@
-import logo from './assets/media/long-logo.png'
 import React from 'react';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
+import Landing from './Landing';
+import Main from './Main';
+import HeaderComponent from './sections/Header/HeaderComponent';
 import GenreComponent from './sections/Survey/GenreComponent';
 import ReturnComponent from './sections/Return/ReturnComponent';
 import FooterComponent from './sections/Footer/FooterComponent';
@@ -8,21 +11,12 @@ import ParentComponent from './sections/Survey/ParentComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://www.guitarguitar.co.uk/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={logo} className="App-logo" alt="logo" />
-        </a>
-      </header>
-      <ParentComponent/>
-      
-      <FooterComponent/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing/>}/>
+        <Route path="/main" element={<Main/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

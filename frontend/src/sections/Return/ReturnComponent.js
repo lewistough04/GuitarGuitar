@@ -52,12 +52,26 @@ function ReturnComponent(){
         }
     ];
 
+    // assume i am getting from api and returns in format 
+    // array of dictionaries
+    const url = ""
+    const [guitar, setGuitar] = useState([]);
     const [guitarIndex, setGuitarIndex] = useState(0);
 
     const nextGuitar = () => {
         setGuitarIndex((prev => ((prev+1) % guitars.length)));
         console.log(guitarIndex)
     }
+
+    //const fetchGuitars = async () => {
+      //  const res = await fetch(url);
+        //const d = await res.json();
+        //return setGuitar(d);
+    //}
+    
+    //useEffect(() => {
+      //  fetchGuitars();
+    //}, []);
 
     return(
         <div className="return-div">
