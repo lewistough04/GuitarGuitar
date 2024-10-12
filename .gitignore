@@ -1,3 +1,85 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Python cache files
+pycache/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+
+# If you are using SQLite3 database files
+*.sqlite3
+
+# If you are using Django migrations
+/migrations/
+
+# If you are using static files
+staticfiles/
+static/
+
+# If you are using media files
+media/
+
+# If you are using local settings
+local_settings.py
+
+# If you are using coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# If you are using Jupyter Notebook
+.ipynb_checkpoints
+
+# If you are using PyCharm
+.idea/
+
+# If you are using VS Code
+.vscode/
+
+# If you are using macOS
+.DS_Store
+
+# If you are using Windows
+Thumbs.db
+
 # Virtual environment
 venv/
 env/
