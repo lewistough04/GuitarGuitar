@@ -101,22 +101,16 @@ def addGear(data):
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/04122311202218f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
-            'sku' : '190718346269008', # Taylor Swift Guitar
-            'item_name' : 'Taylor Taylor Swift Baby Taylor (TSBT) Signature',
-            'price' : "325.00",
-            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/190718346269008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
-            
-        },{
-            'sku' : '180430326802008', # classical guitar
-            'item_name' : 'Yamaha C40 Classical Guitar',
-            'price' : "129.00",
-            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/130/09071411013328f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
-            
-        },{
             'sku' : '240717426967008', # jazz guitar
             'item_name' : 'Ibanez PM3C Pat Metheny Signature Natural Amber Low Gloss',
             'price' : "1399.00",
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/240717426967008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
+        },{
+            'sku' : '190319340838008', # ACDC Guitar
+            'item_name' : 'Gibson SG Standard Heritage Cherry',
+            'price' : "1399.00",
+            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/190319340838008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },
         
@@ -136,6 +130,11 @@ def addArtist():
             'products' : Gear.objects.get(sku = "180430326802008")
         },
         {
+            'name' : 'AC/DC',
+            'genre' : Genre.objects.get(name = "Rock"),
+            'products' : Gear.objects.get(sku = "190319340838008")
+        },
+        {
             'name' : 'Taylor Swift',
             'genre' : Genre.objects.get(name = "Pop"),
             'products' : Gear.objects.get(sku = "190718346269008")
@@ -143,7 +142,7 @@ def addArtist():
         {
             'name' : 'John Williams',
             'genre' : Genre.objects.get(name = "Classical"),
-            'products' : Gear.objects.get(sku = "180430326802008")
+            'products' : Gear.objects.get(sku = "09071411013328")
         },
         {
             'name' : 'Pat Metheny',
