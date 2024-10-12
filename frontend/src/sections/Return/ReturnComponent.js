@@ -1,5 +1,5 @@
 import "./ReturnComponent.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ReturnComponent(){
 
@@ -58,6 +58,7 @@ function ReturnComponent(){
         setGuitarIndex((prev => ((prev+1) % guitars.length)));
         console.log(guitarIndex)
     }
+
     return(
         <div className="return-div">
             <div>
