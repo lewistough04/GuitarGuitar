@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/genres/", GenreView.as_view(), name="genres"),
     path("api/<str:genre_name>/artists/", GenreArtistView.as_view(), name="artists"),
-    path("api/<str:genre_name>/artists/", ArtistGearView.as_view(), name="gear")
+    path("api/<str:genre_name>/gear/", ArtistGearView.as_view(), name="gear")
 ]
