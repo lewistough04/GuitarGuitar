@@ -13,12 +13,18 @@ class GenreView(APIView):
     
 #a class to get artists for certain genre
 class GenreArtistView(APIView):
+    def get(self, request):
+        output = [{"name": output.name} for output in Artist.objects.all()]
+        return Response(output)
+    
     def post(self, request):
         genre_name = request.data.get("name", None)
         if genre_name:
             try:
-                genre = Genre.object.get(name=genre_name)
-            except genre.DoesNotExist:
+                print(genre_name)
+                genre = Genre.objects.get(name=genre_name)
+
+            except Genre.DoesNotExist:
                 return Response({"error": "Genre not found"}, status=404)
         
             artists = Artist.objects.filter(genre=genre)
