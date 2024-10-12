@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import SurveyComponent from './sections/Survey/SurveyComponent';
 import ReturnComponent from './sections/Return/ReturnComponent';
+import FooterComponent from './sections/Footer/FooterComponent';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </header>
       <SurveyComponent/>
       <ReturnComponent/>
+      <FooterComponent/>
     </div>
   );
 }
