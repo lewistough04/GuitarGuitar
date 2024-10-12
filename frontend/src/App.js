@@ -1,7 +1,7 @@
 import logo from './assets/media/long-logo.png'
 import React from 'react';
 import './App.css';
-import SurveyComponent from './sections/Survey/SurveyComponent';
+import GenreComponent from './sections/Survey/GenreComponent';
 import ReturnComponent from './sections/Return/ReturnComponent';
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </a>
       </header>
-      <SurveyComponent/>
-      <ReturnComponent/>
+      <GenreComponent/>
+      
     </div>
   );
 }
