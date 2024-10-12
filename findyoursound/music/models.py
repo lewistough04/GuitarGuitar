@@ -8,16 +8,8 @@ class Genre(models.Model):
     def __str__(self):
         return self.name
     
-class Artist(models.Model):
-    name = models.CharField(max_length=100)
-    genre = models.ForeignKey(Genre, related_name='artists', on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.name
-
 
 class Gear(models.Model):
-    artists = models.ManyToManyField(Artist, related_name='gears') #Many to many relationship with Artist
     sku = models.CharField(max_length=100)
     asn = models.CharField(max_length=100)
     category = models.CharField(max_length=100)
@@ -42,5 +34,12 @@ class Gear(models.Model):
     newcastle_quantity = models.IntegerField()
     #If the 3 store stock quantities are 0, but there’s still some in QtyInStock, we just have some in the warehouse.
 
+    def __str__(self):
+        return self.name
+
+class Artist(models.Model):
+    name = models.CharField(max_length=100)
+    genre = models.ForeignKey(Genre, related_name='artists', on_delete=models.CASCADE)
+    products = models.ForeignKey(Gear, related_name='uses', null=True, on_delete=models.SET_NULL)
     def __str__(self):
         return self.name

@@ -5,21 +5,48 @@
 }
 
 .return-div {
-    border: 1px solid black;
-    border-radius: 5%;
+    background-color: white;
+    border-radius: 2%;
     display: flex;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .guitar-image {
     width: 200px;
     height: auto;
-    padding: 10px;
+    padding: 20px;
 }
 
 .guitar-text {
     text-align: left;
-    padding: 10px;
+    padding: 20px;
+}
+
+.guitar-description {
+    padding-top: 10px;
+}
+
+.next-button {
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    margin-bottom: 10px;
+    background-color: #FAF9F6;
+    color: #111827;
+    cursor: pointer;
+    padding: 2px 24px;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.next-button:hover {
+    background-color: #fff;
 }
