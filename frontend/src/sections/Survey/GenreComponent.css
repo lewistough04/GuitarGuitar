@@ -1,38 +1,46 @@
 .main-div{
+    max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #282c34;
+    border-radius: 10px; 
 }
 
 .survey-title{
     color: orange;
-    padding-top: 3%;
-    padding-bottom: 10%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
 }
 
 .genres-list {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-.genres-list li {
+/* .genres-list li {
     display: inline-block;
     margin: 5px;
     flex: auto;
-}
+} */
 
 .genre-button {
-    padding: 50px 100px;
-    font-size: 20px;
+    padding: 40px 80px;
+    font-size: 1.2rem;
     background-color: #f0f0f0;
     border: 2px solid #ccc;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .genre-button:hover {
     background-color: #e0e0e0;
+    transform: translateY(-2px);
 }
 
 .genre-button.selected {
@@ -46,6 +54,34 @@
     font-size: xx-large;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 30px;
+}
+
+.button{
+    padding: 15px 30px; 
+    font-size: 1.5rem;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover{
+    background-color: #0061c9;
+    transform: translateY(-2px);
+}
+
 .next-page{
-    align-self: right;
+    justify-self: flex-start;
+    min-width: 10%;
+}
+
+.prev-page{
+    justify-self: flex-end;
+    min-width: 10%;
 }

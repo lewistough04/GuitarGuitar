@@ -6,8 +6,6 @@ function GenreComponent({ onNext }){
 
     const [genres, setGenres] = useState(["Rock & Roll", "Pop", "Country", "Acid-House"]);
     const [selectedGenre, setSelectedGenre] = useState('');
-    const [error, setError] = useState([]);
-    const [loading, setLoading] = useState([]);
 
     useEffect(() => {
         const fetchGenres = async () => {
@@ -23,6 +21,16 @@ function GenreComponent({ onNext }){
         console.log("Selected genre: ", genre);
     }
 
+    const handleNext = async () => {
+        if (selectedGenre) {
+            const response = await Axios.put('http://localhost:8000/api/genres/', { name: selectedGenre });
+            console.log('PUT response:', response.data);
+            onNext();
+        } else {
+            console.log("No genre selected.");
+        }
+    };
+
     return(
         <div className="main-div">
             <h1 className="survey-title">What is your favourite genre!</h1>
@@ -36,8 +44,10 @@ function GenreComponent({ onNext }){
                 </li>
             ))}
             </ul>
-            
-            <button className="next-page" onClick={onNext}>Next</button>
+            <div className="button-container">
+                <button className="button prev-page" onClick={onNext}>Go Back</button>
+                <button className="button next-page" onClick={handleNext}>Next</button>
+            </div>
         </div>
     );
 }
