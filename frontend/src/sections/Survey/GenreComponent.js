@@ -23,7 +23,7 @@ function GenreComponent({ onNext }){
 
     const handleNext = async () => {
         if (selectedGenre) {
-            const response = await Axios.put('http://localhost:8000/api/genres/', { name: selectedGenre });
+            const response = await Axios.post('http://localhost:8000/api/genres/', { name: selectedGenre });
             console.log('PUT response:', response.data);
             onNext();
         } else {

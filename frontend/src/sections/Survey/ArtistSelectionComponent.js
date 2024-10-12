@@ -3,7 +3,7 @@ import Axios from "axios";
 import "./ArtistSelectionComponent.css"
 
 function ArtistSelectionComponent({onNext}){
-    const [artists, setArtists] = useState(["Micheal Jackson"]);
+    const [artists, setArtists] = useState([]);
     const [selectedArtists, setSelectedArtists] = useState([]);
 
     useEffect(() => {
@@ -32,10 +32,10 @@ function ArtistSelectionComponent({onNext}){
         if (selectedArtists.length > 0) {
             try {
                 const response = await Axios.put('http://localhost:8000/api/selected-artists/', {
-                    artists: selectedArtists // Send the selected artists array to the backend
+                    artists: selectedArtists 
                 });
                 console.log('PUT response:', response.data);
-                onNext(); // Call onNext to proceed to the next component
+                onNext(); 
             } catch (error) {
                 console.error("Error submitting artists:", error);
             }
