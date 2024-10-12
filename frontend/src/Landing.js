@@ -12,7 +12,6 @@ function Landing() {
 
     return (
         <div>
-            <HeaderComponent/>
             <div>
                 <div id="welcome">
                     <h1 id="welcome-header">Welcome to the GuitarGuitar Wizard</h1>
@@ -37,7 +36,6 @@ function Landing() {
                     </div>
                 </div>
             </div>
-            <FooterComponent/>
         </div>
     )
 }

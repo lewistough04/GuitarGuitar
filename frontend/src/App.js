@@ -11,12 +11,11 @@ import ParentComponent from './sections/Survey/ParentComponent';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Landing/>}/>
-        <Route path="/main" element={<Main/>}/>
-      </Routes>
-    </BrowserRouter>
+    <>
+    <HeaderComponent/>
+    <ParentComponent/>
+    <FooterComponent/>
+    </>
   );
 }
 
