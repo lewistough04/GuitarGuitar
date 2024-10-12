@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import logo from '.'
+import logo from './assets/media/long-logo.png'
 import './App.css';
+import SurveyComponent from './sections/Survey/SurveyComponent';
 
 function App() {
   return (
@@ -8,17 +8,18 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to the sample screen for Guitar Guitar
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.guitarguitar.co.uk/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Go To Guitar Guitar!
         </a>
       </header>
+      <SurveyComponent/>
     </div>
   );
 }
