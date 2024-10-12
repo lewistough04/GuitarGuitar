@@ -91,34 +91,40 @@ def addGear(data):
         {
             'sku' : '180430326802008', # Billy from Smashing Pumpkins
             'item_name' : 'Fender Player Stratocaster Buttercream Maple Fingerboard',
-            'price' : "659.00",
+            'price' : 659.00,
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/180430326802008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
             'sku' : '04122311202218', # Billy from Smashing Pumpkins
             'item_name' : 'Electro Harmonix Big Muff Pi',
-            'price' : "89.00",
+            'price' : 89.00,
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/04122311202218f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
             'sku' : '240717426967008', # jazz guitar
             'item_name' : 'Ibanez PM3C Pat Metheny Signature Natural Amber Low Gloss',
-            'price' : "1399.00",
+            'price' : 1399.00,
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/240717426967008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
             'sku' : '190319340838008', # ACDC Guitar
             'item_name' : 'Gibson SG Standard Heritage Cherry',
-            'price' : "1399.00",
+            'price' : 1399.00,
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/190319340838008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },
         {
             'sku' : '240430423245008', # Mettalica Guitar
             'item_name' : 'Epiphone Inspired by Gibson Custom Jimi Hendrix Love Drops Flying V',
-            'price' : "1,499.00",
+            'price' : 1499.00,
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/240430423245008f.jpg",
             
+        },
+        {
+            'sku' : '190319340838008', # Black Sabbath Guitar
+            'item_name' : 'Gibson SG Standard Heritage Cherry',
+            'price' : 1399.00,
+            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/190319340838008f.jpg",
         }
     ]
     
@@ -159,6 +165,11 @@ def addArtist():
             'name' : 'Mettalica',
             'genre' : Genre.objects.get(name = "Metal"),
             'products' : Gear.objects.get(sku = "240430423245008")
+        },
+        {
+            'name' : 'Black Sabbath',
+            'genre' : Genre.objects.get(name = "Metal"),
+            'products' : Gear.objects.get(sku = "190319340838008")
         }
     ]
     for artist in artists:
