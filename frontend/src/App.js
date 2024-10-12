@@ -4,6 +4,7 @@ import './App.css';
 import GenreComponent from './sections/Survey/GenreComponent';
 import ReturnComponent from './sections/Return/ReturnComponent';
 import FooterComponent from './sections/Footer/FooterComponent';
+import ParentComponent from './sections/Survey/ParentComponent';
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </a>
       </header>
-      <GenreComponent/>
-      <ReturnComponent/>
+      <ParentComponent/>
+      
       <FooterComponent/>
     </div>
   );

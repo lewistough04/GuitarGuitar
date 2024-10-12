@@ -2,23 +2,15 @@ import "./GenreComponent.css"
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
-function GenreComponent(){
+function GenreComponent({ onNext }){
 
     const [genres, setGenres] = useState(["Rock & Roll", "Pop", "Country", "Acid-House"]);
     const [selectedGenre, setSelectedGenre] = useState('');
-    const [error, setError] = useState([]);
-    const [loading, setLoading] = useState([]);
 
     useEffect(() => {
         const fetchGenres = async () => {
-            try {
-                const response = await Axios.get('http://localhost:8000/api/genres/');
-                setGenres(response.data);
-            } catch (error) {
-                setError(error);
-            } finally {
-                setLoading(false);
-            }
+            const response = await Axios.get('http://localhost:8000/api/genres/');
+            setGenres(response.data);
         };
 
         fetchGenres();
@@ -29,8 +21,15 @@ function GenreComponent(){
         console.log("Selected genre: ", genre);
     }
 
-    if (loading) return <div className="error-message">Loading genres...</div>;
-    if (error) return <div className="error-message">Error fetching genres: {error.message}</div>;
+    const handleNext = async () => {
+        if (selectedGenre) {
+            const response = await Axios.post('http://localhost:8000/api/genres/', { name: selectedGenre });
+            console.log('PUT response:', response.data);
+            onNext();
+        } else {
+            console.log("No genre selected.");
+        }
+    };
 
     return(
         <div className="main-div">
@@ -38,14 +37,17 @@ function GenreComponent(){
             <ul className="genres-list">
             {genres.map((genre, index) => (
                 <li key={index}> 
-                    <button className={`genre-button ${selectedGenre === genre ? 'selected' : ''}`}
-                            onClick={() => handleGenreChange(genre)}>
-                        {genre}
+                    <button className={`genre-button ${selectedGenre === genre.name ? 'selected' : ''}`}
+                            onClick={() => handleGenreChange(genre.name)}>
+                        {genre.name}
                     </button>
                 </li>
             ))}
             </ul>
-            <button className="next-page">Next</button>
+            <div className="button-container">
+                <button className="button prev-page" onClick={onNext}>Go Back</button>
+                <button className="button next-page" onClick={handleNext}>Next</button>
+            </div>
         </div>
     );
 }
