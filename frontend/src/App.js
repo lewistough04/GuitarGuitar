@@ -1,8 +1,10 @@
 import logo from './assets/media/long-logo.png'
 import React from 'react';
 import './App.css';
-import SurveyComponent from './sections/Survey/SurveyComponent';
+import GenreComponent from './sections/Survey/GenreComponent';
 import ReturnComponent from './sections/Return/ReturnComponent';
+import FooterComponent from './sections/Footer/FooterComponent';
+
 function App() {
   return (
     <div className="App">
@@ -16,8 +18,9 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </a>
       </header>
-      <SurveyComponent/>
+      <GenreComponent/>
       <ReturnComponent/>
+      <FooterComponent/>
     </div>
   );
 }

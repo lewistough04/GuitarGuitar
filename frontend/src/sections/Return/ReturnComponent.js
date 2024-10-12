@@ -62,10 +62,13 @@ function ReturnComponent(){
         <div className="return-div">
             <div>
                 <img src={guitars[guitarIndex].PictureMain} className="guitar-image" alt={guitars[guitarIndex].ItemName}></img>
-                <button onClick={nextGuitar}>Next</button>
+                <button className="next-button" onClick={nextGuitar}>Next</button>
             </div>
 
-            <p className="guitar-text">{guitars[guitarIndex].ProductDetail}</p>
+            <div className="guitar-text">
+                <h2>{guitars[guitarIndex].ItemName}</h2>
+                <p className="guitar-description">{guitars[guitarIndex].ProductDetail}</p>
+            </div>
         </div>
     );
 }
