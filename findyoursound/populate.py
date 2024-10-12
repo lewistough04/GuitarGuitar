@@ -113,7 +113,13 @@ def addGear(data):
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/190319340838008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },
-        
+        {
+            'sku' : '240430423245008', # Mettalica Guitar
+            'item_name' : 'Epiphone Inspired by Gibson Custom Jimi Hendrix Love Drops Flying V',
+            'price' : "1,499.00",
+            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/240430423245008f.jpg",
+            
+        }
     ]
     
     for row in extras:
@@ -148,6 +154,11 @@ def addArtist():
             'name' : 'Pat Metheny',
             'genre' : Genre.objects.get(name = "Jazz"),
             'products' : Gear.objects.get(sku = "240717426967008")
+        },
+        {
+            'name' : 'Mettalica',
+            'genre' : Genre.objects.get(name = "Metal"),
+            'products' : Gear.objects.get(sku = "240430423245008")
         }
     ]
     for artist in artists:
@@ -166,6 +177,9 @@ def addGenre():
         },
         {
             'name': 'Jazz'
+        },
+        {
+            'name': 'Metal'
         }
 
     ]
