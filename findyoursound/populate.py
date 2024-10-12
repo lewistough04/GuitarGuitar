@@ -119,12 +119,6 @@ def addGear(data):
             'price' : 1499.00,
             'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/240430423245008f.jpg",
             
-        },
-        {
-            'sku' : '190319340838008', # Black Sabbath Guitar
-            'item_name' : 'Gibson SG Standard Heritage Cherry',
-            'price' : 1399.00,
-            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/190319340838008f.jpg",
         }
     ]
     
