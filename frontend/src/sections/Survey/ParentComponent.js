@@ -8,7 +8,7 @@ const ParentComponent = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<GenreComponent />} />
-                <Route path="/artists" element={<ArtistSelectionComponent />} />
+                <Route path="/:genre/artists" element={<ArtistSelectionComponent />} />
             </Routes>
         </Router>
     );

@@ -29,13 +29,7 @@ function GenreComponent({ onNext }){
 
     const handleNext = async () => {
         if (selectedGenre) {
-            try {
-                const response = await Axios.post('http://localhost:8000/api/artists/', { genre: selectedGenre });
-                console.log('POST response:', response.data);
-                navigate('/artists', { state: { artists: response.data } });
-            } catch (error) {
-                console.error("Error posting genre:", error);
-            }
+            navigate(`/${selectedGenre}/artists`)
         } else {
             console.log("No genre selected.");
         }
@@ -47,9 +41,9 @@ function GenreComponent({ onNext }){
             <ul className="genres-list">
                 {genres.map((genre, index) => (
                     <li key={index}> 
-                        <button className={`genre-button ${selectedGenre === genre ? 'selected' : ''}`}
-                                onClick={() => handleGenreChange(genre)}>
-                            {genre}
+                        <button className={`genre-button ${selectedGenre === genre.name ? 'selected' : ''}`}
+                                onClick={() => handleGenreChange(genre.name)}>
+                            {genre.name}
                         </button>
                     </li>
                 ))}

@@ -1,33 +1,28 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import "./ArtistSelectionComponent.css";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+
 
 function ArtistSelectionComponent() {
-    const location = useLocation(); 
-    const [artists, setArtists] = useState(location.state?.artists || []); 
+    const { genre } = useParams();
+    const [artists, setArtists] = useState([]); 
     const [selectedArtists, setSelectedArtists] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (!artists.length) {
-            const fetchArtists = async () => {
-                try {
-                    const response = await Axios.get('http://localhost:8000/api/artists/');
-                    if (Array.isArray(response.data)) {
-                        setArtists(response.data);
-                    } else if (response.data && response.data.name) {
-                        setArtists([response.data]);
-                    } else {
-                        console.error("Unexpected response format:", response.data);
-                    }
-                } catch (error) {
-                    console.error("Error fetching artists:", error);
-                }
-            };
-            fetchArtists();
-        }
-    }, [artists]);
+        const fetchArtists = async () => {
+            try {
+                const response = await Axios.get(`http://localhost:8000/api/${genre}/artists/`);
+                setArtists(response.data);
+                console.log('Fetched artists:', response.data);
+            } catch (error) {
+                console.error("Error fetching artists:", error);
+            }
+        };
+
+        fetchArtists(); // Call the fetch function
+    }, [genre]);
 
     const handleArtistChange = (artistName) => {
         setSelectedArtists(prevSelected => 
@@ -55,7 +50,7 @@ function ArtistSelectionComponent() {
 
     return (
         <div className="main-div">
-            <h1 className="survey-title">Choose your favourite artists!</h1>
+            <h1 className="survey-title">Choose your favourite {genre} artists!</h1>
             <ul className="artists-list">
                 {artists.map((artist, index) => (
                     <li key={index}>
