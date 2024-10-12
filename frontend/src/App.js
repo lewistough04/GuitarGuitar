@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import GenreComponent from './sections/Survey/GenreComponent';
 import ReturnComponent from './sections/Return/ReturnComponent';
+import FooterComponent from './sections/Footer/FooterComponent';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         </a>
       </header>
       <GenreComponent/>
-      
+      <ReturnComponent/>
+      <FooterComponent/>
     </div>
   );
 }
