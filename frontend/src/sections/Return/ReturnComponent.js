@@ -67,6 +67,7 @@ function ReturnComponent(){
 
             <div className="guitar-text">
                 <h2>{guitars[guitarIndex].ItemName}</h2>
+                <h4>{guitars[guitarIndex].SalesPrice.toLocaleString(undefined, {style: "currency", currency: "GBP"})}</h4>
                 <p className="guitar-description">{guitars[guitarIndex].ProductDetail}</p>
             </div>
         </div>
