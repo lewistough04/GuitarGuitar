@@ -6,9 +6,10 @@ class GenreSerializer(serializers.ModelSerializer):
         fields = ['name']
 
 class ArtistSerializer(serializers.ModelSerializer):
+    genre = GenreSerializer()
     class Meta:
         model = Artist
-        fields = ['name', 'genre']
+        fields = ['name', 'genre', 'products']
 
 class GearSerializer(serializers.ModelSerializer):
     class Meta:
