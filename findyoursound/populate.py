@@ -14,13 +14,71 @@ def getJSON():
     url = "https://www.guitarguitar.co.uk/hackathon/products"
     response = requests.get(url).text
     json_data = json.loads(response)
+    oldFieldNames = [
+    'SKU_ID',
+    'ASN',
+    'Category',
+    'Online',
+    'ItemName',
+    'Title',
+    'BrandName',
+    'Description',
+    'SalesPrice',
+    'PictureMain',
+    'QtyInStock',
+    'QtyOnOrder',
+    'Colour',
+    'Pickup',
+    'BodyShape',
+    'CreatedOn',
+    'ImageUrls',
+    'Rating',
+    'GlasgowQty',
+    'EdinburghQty',
+    'NewcastleQty'
+    ]
+
+    newFieldNames = [
+    "sku",
+    "asn",
+    "category",
+    "online",
+    "item_name",
+    "title",
+    "brand_name",
+    "description",
+    "productDetail",
+    "price",
+    "picture_main",
+    "quantity_in_stock",
+    "quantity_on_order",
+    "color_option",
+    "pickup_option",
+    "shape_option",
+    "created_at",
+    "image_urls",
+    "rating",
+    "glasgow_quantity",
+    "edinburgh_quantity",
+    "newcastle_quantity"
+    ]
+
+    for i in range(0, len(json_data)):
+        for j in range(0, len(oldFieldNames)):
+            json_data[i][newFieldNames[j]] = json_data[i][oldFieldNames[j]]
+            del json_data[i][oldFieldNames[j]]
+
+
     return json_data
 
 def populate():
     addGear(getJSON())
+    addGenre()
+    addArtist()
         
         
 def addGear(data):
+
     for row in data:
         Gear.objects.get_or_create(**row)
 
