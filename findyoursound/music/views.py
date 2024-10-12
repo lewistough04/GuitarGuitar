@@ -16,3 +16,10 @@ class GenreView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors)
+
+
+class ArtistView(APIView):
+    def get(self, request):
+        output = [{"name": output.name}
+                   for output in Artist.objects.all()]
+        return Response(output)
