@@ -22,5 +22,6 @@ from music.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/genres/", GenreView.as_view(), name="genres"),
-    path("api/artists/", GenreArtistView.as_view(), name="artists")
+    path("api/artists/", GenreArtistView.as_view(), name="artists"),
+    path("api/gear/", ArtistGearView.as_view(), name="gear")
 ]

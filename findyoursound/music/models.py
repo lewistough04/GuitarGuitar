@@ -41,5 +41,6 @@ class Artist(models.Model):
     name = models.CharField(max_length=100)
     genre = models.ForeignKey(Genre, related_name='artists', on_delete=models.CASCADE)
     products = models.ForeignKey(Gear, related_name='uses', null=True, on_delete=models.SET_NULL)
+    band = models.CharField(max_length=100, null = True, blank = True)
     def __str__(self):
         return self.name

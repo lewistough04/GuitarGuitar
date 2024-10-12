@@ -151,5 +151,5 @@ def addGenre():
 
     
 if __name__ == '__main__':
-    print('Starting Rango population script...')
+    print('Starting Django population script...')
     populate()

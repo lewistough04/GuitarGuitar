@@ -26,8 +26,17 @@ class GenreArtistView(APIView):
 
             except Genre.DoesNotExist:
                 return Response({"error": "Genre not found"}, status=404)
-        
             artists = Artist.objects.filter(genre=genre)
             serializer = ArtistSerializer(artists, many = True)
+            return Response(serializer.data)
+        return Response({"error": "Invalid genre"}, status=400)
+
+class ArtistGearView(APIView):
+    def post(self, request):
+        artist_names = request.data.get("artists", [])
+        if artist_names:
+            artists = Artist.objects.filter(name__in=artist_names)
+            gear_set = Gear.objects.filter(uses__in=artists).distinct()
+            serializer = GearSerializer(gear_set, many=True)
             return Response(serializer.data)
         return Response({"error": "Invalid genre"}, status=400)
