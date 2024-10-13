@@ -1,7 +1,9 @@
 import './HeaderComponent.css';
 import logo from '../../assets/media/long-logo.png'
+import React, { useEffect } from 'react';
 
 function HeaderComponent() {
+
     return (
     <header className="App-header">
         <a

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Landing.css"
+import logoImage from './assets/media/monkey-wizard.png'
 
 function Landing() {
 
@@ -31,6 +32,9 @@ function Landing() {
                     <h2 className="step-header">Step 3</h2>
                     <h4 className="step-text">View equipment recommended for you</h4>
                 </div>
+            </div>
+            <div className='lander-image-container'>
+                <img className='lander-image' src={logoImage} alt="Landing Page" />
             </div>
         </body>
     )

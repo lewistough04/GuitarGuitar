@@ -44,3 +44,15 @@ body {
     text-align: center;
     border: 1px solid black;
 }
+
+.lander-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;  
+}
+
+.lander-image {
+    width: 300px;           
+    height: auto;      
+}
