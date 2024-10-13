@@ -45,7 +45,7 @@ function ArtistSelectionComponent() {
                     artists: selectedArtists
                 });
                 console.log('Gear fetched from backend:', response.data);
-                navigate('/return', { state: { gear: response.data } });
+                navigate('/return', { state: { artists: selectedArtists, gear: response.data } });
             } catch (error) {
                 console.error("Error submitting artists:", error);
             }

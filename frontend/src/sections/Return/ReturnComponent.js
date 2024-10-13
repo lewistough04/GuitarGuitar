@@ -98,24 +98,24 @@ function ReturnComponent(){
         <div className="return-div">
             <div>
                 <img
-                    src={currentGuitar.PictureMain}
+                    src={currentGuitar.image_urls}
                     className="guitar-image"
-                    alt={currentGuitar.ItemName}
+                    alt={currentGuitar.item_name}
                 />
                 <button className="next-button" onClick={nextGuitar}>Next</button>
             </div>
 
             <div className="guitar-text">
-                <h2>{currentGuitar.ItemName}</h2>
+                <h2>{currentGuitar.item_name}</h2>
                 <h4>
-                    {currentGuitar.SalesPrice
-                        ? currentGuitar.SalesPrice.toLocaleString(undefined, {
+                    {currentGuitar.price
+                        ? currentGuitar.price.toLocaleString(undefined, {
                             style: "currency",
                             currency: "GBP",
                           })
                         : "Price not available"}
                 </h4>
-                <p className="guitar-description">{currentGuitar.ProductDetail}</p>
+                <p className="guitar-description">{currentGuitar.productDetail}</p>
             </div>
         </div>
     );
