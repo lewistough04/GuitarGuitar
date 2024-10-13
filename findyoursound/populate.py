@@ -94,7 +94,33 @@ def addGear(data):
             'price' : 659.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/180430326802008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
+        }, {
+            'sku' : '230126399454008', # Nirvana Guitar
+            'item_name' : 'Squier Sonic Mustang 2 Tone Sunburst Maple Fingerboard',
+            'price' : 159.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/230126399454008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
+        }, { # Pop
+            
+            'sku': '08082816154628', # Ed Sheeran Guitar,
+            'item_name': 'Martin LX1E Little Martin',
+            'price': 515.00,
+            'picture_main': 'https://images.guitarguitar.co.uk/cdn/large/170/08082816154628f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70',
+        }, {
+            'sku' : '07080112173928', # The Beatles Guitar
+            'item_name' : 'Epiphone Casino Vintage Sunburst',
+            'price' : 629.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/07080112173928f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
         },{
+            'sku' : '170705312155008', # ABBA Guitar
+            'item_name' : 'Hagstrom Fantomen White Gloss',
+            'price' : 749.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/170705312155008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+            },
+        
+        
+        
+        {
             'sku' : '04122311202218', # Billy from Smashing Pumpkins
             'item_name' : 'Electro Harmonix Big Muff Pi',
             'price' : 89.00,
@@ -159,7 +185,20 @@ def addArtist():
             'name' : 'Taylor Swift',
             'genre' : Genre.objects.get(name = "Pop"),
             'products' : Gear.objects.get(sku = "190718346269008")
+        },{
+            'name' : 'Ed Sheeran',
+            'genre' : Genre.objects.get(name = "Pop"),
+            'products' : Gear.objects.get(sku = "08082816154628")
+        },{
+            'name' : 'The Beatles',
+            'genre' : Genre.objects.get(name = "Pop"),
+            'products' : Gear.objects.get(sku = "07080112173928")
+        },{
+            'name' : 'ABBA',
+            'genre' : Genre.objects.get(name = "Pop"),
+            'products' : Gear.objects.get(sku = "170705312155008")
         },
+        
         {   # Classical --------------------------------------------------
             'name' : 'John Williams',
             'genre' : Genre.objects.get(name = "Classical"),
