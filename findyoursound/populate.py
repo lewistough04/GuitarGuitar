@@ -139,6 +139,13 @@ def addGear(data):
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/240717426967008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
+            'sku': '240805427735020',
+            'item_name': 'Fender Limited Edition Player Stratocaster Pau Ferro Fingerboard Black with Custom Shop Pickups',
+            'category': 'GUBA',
+            'price': 599.00,
+            'picture_main': "https://images.guitarguitar.co.uk/cdn/large/170/240805427735020f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+            },
+        {
             'sku' : '190319340838008', # ACDC Guitar
             'item_name' : 'Gibson SG Standard Heritage Cherry',
             'category' : 'GUEG',
@@ -382,7 +389,12 @@ def addArtist():
             'name' : 'Pat Metheny',
             'genre' : Genre.objects.get(name = "Jazz"),
             'products' : ["240717426967008"]
-        },{ # Metal --------------------------------------------------------
+        },{
+            'name' : 'Vulfpeck',
+            'genre' : Genre.objects.get(name = "Jazz"),
+            'products' : ["200723360507025",]
+            },
+        { # Metal --------------------------------------------------------
             'name' : 'Metallica',
             'genre' : Genre.objects.get(name = "Metal"),
             'products' : ["240430423245008"]
