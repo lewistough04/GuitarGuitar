@@ -165,14 +165,14 @@ def addGear(data):
         ,{
             'sku' : '190125338539008',
             'item_name' : 'Fender Professional Series 10ft Straight Instrument Cable, Black',
-            'category' : 'AC',
+            'category' : 'ACC',
             'price' : 15.99,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/190125338539008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
         {
             'sku' : '220302382224027',
             'item_name' : 'Ordo 10ft/3m Angled Instrument Cable',
-            'category' : 'AC',
+            'category' : 'ACC',
             'price' : 12.99,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/220302382224027f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
