@@ -303,6 +303,20 @@ def addGear(data):
             'price' : 589.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/04061716510318f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
         },
+        {
+            'sku' : '210623370758025',
+            'item_name' : 'EVH 5150 Iconic 40W 1x12 Combo Valve Amp Ivory',
+            'category' : 'AMP',
+            'price' : 659.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/210623370758025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
+        {
+            'sku' : '230126399351025',
+            'item_name' : 'EVH 5150 Iconic 15W Black Combo Valve Amp',
+            'category' : 'AMP',
+            'price' : 499.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/230126399351025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
         # Cables
         {
             'sku' : '190125338539008',
@@ -343,6 +357,13 @@ def addGear(data):
             'category' : 'ACC',
             'price' : 5.99,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/11051614363558.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+        {
+            'sku' : '210120366173025',
+            'item_name' : 'Dunlop EVH 5150 Max Grip Picks Pack of 6',
+            'category' : 'ACC',
+            'price' : 11.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/210120366173025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
 
         # gig bags
@@ -431,7 +452,7 @@ def addArtist():
         },{
             'name' : 'Vulfpeck',
             'genre' : Genre.objects.get(name = "Jazz"),
-            'products' : ["200723360507025",]
+            'products' : ["200723360507025", '240805427735020']
             },
         { # Metal --------------------------------------------------------
             'name' : 'Metallica',
@@ -448,7 +469,7 @@ def addArtist():
         },{
             'name': 'Van Halen',
             'genre': Genre.objects.get(name = "Metal"),
-            'products': ["191204352060008"]
+            'products': ["191204352060008", "210120366173025", "210623370758025", "230126399351025"]
         }  
     ]
     
