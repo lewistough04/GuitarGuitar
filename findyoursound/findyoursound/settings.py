@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-chx!%%)=k*&l*f_cdee2!i!#6go*b+4$+w^&crqt-nml+4(i0n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['api.dyhtg.com']
+ALLOWED_HOSTS = ['api.dyhtg.com','localhost']
 
 
 # Application definition
