@@ -103,6 +103,20 @@ def addGear(data):
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/230126399454008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
+            'sku' : '190110337350008',
+            'item_name' : 'Squier Classic Vibe 70s Jaguar 3 Tone Sunburst Indian Laurel Fingerboard',
+            'category' : 'GUEG',
+            'price' : 389.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/190110337350008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
+        },{
+            'sku' : '13122413470032',
+            'item_name' : 'Fender Kurt Cobain Jaguar 3 Colour Sunburst NOS Rosewood Fingerboard',
+            'category' : 'GUEG',
+            'price' : 1379.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/13122413470032f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            
+        },{
             'sku' : '07080112173928', # The Beatles Guitar
             'item_name' : 'Epiphone Casino Vintage Sunburst',
             'category' : 'GUEG',
@@ -116,16 +130,7 @@ def addGear(data):
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/170705312155008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
             },
         
-        
-        
-        {
-            'sku' : '04122311202218', # Billy from Smashing Pumpkins
-            'item_name' : 'Electro Harmonix Big Muff Pi',
-            'category' : 'PEDL',
-            'price' : 89.00,
-            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/04122311202218f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
-            
-        },{ # Jazz
+        { # Jazz
             'sku' : '240717426967008', # jazz guitar
             'item_name' : 'Ibanez PM3C Pat Metheny Signature Natural Amber Low Gloss',
             'category' : 'GUEG',
@@ -159,10 +164,57 @@ def addGear(data):
             'category' : 'GUEG',
             'price' : 1199.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/191204352060008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
-        }
+        },
+        # bass
 
+        {
+            'sku' : '04042010374818', # beatles bass
+            'item_name' : 'Epiphone Viola Short Scale Bass Vintage Sunburst',
+            'category' : 'GUBA',
+            'price' : 349.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/130/04042010374818f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+        # Pedals
+        {
+            'sku' : '04122311202218',
+            'item_name' : 'Electro Harmonix Big Muff Pi',
+            'category' : 'PEDL',
+            'price' : 89.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/04122311202218f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
+        {
+            'sku' : '04052410171618',
+            'item_name' : 'BOSS DS-1 Distortion Pedal',
+            'category' : 'PEDL',
+            'price' : 63.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/04052410171618f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
+
+        # Amps
+        {
+            'sku' : '180625328945008',
+            'item_name' : 'Vox AC30S1 1x12 Combo',
+            'category' : 'AMP',
+            'price' : 629.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/180625328945008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
+        {
+            'sku' : '10012109542729',
+            'item_name' : 'Vox AC30C2 2x12 Combo Valve Amp',
+            'category' : 'AMP',
+            'price' : 949.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/10012109542729f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
+
+        {
+            'sku' : '04061716510318',
+            'item_name' : 'Marshall 1960A 4x12 Guitar Cabinet',
+            'category' : 'AMP',
+            'price' : 589.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/04061716510318f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
         # Cables
-        ,{
+        {
             'sku' : '190125338539008',
             'item_name' : 'Fender Professional Series 10ft Straight Instrument Cable, Black',
             'category' : 'ACC',
@@ -214,16 +266,16 @@ def addArtist():
             # Rock
             'name' : 'The Smashing Pumpkins',
             'genre' : Genre.objects.get(name = "Rock"),
-            'products' : ["180430326802008"]
+            'products' : ["180430326802008", "04122311202218"]
         },
         {
             'name' : 'AC/DC',
             'genre' : Genre.objects.get(name = "Rock"),
-            'products' : ["190319340838008"]
+            'products' : ["190319340838008", "04061716510318"]
         },{
             'name' : 'Nirvana',
             'genre' : Genre.objects.get(name = "Rock"),
-            'products' : ["230126399454008"]
+            'products' : ["230126399454008", "04052410171618", "190110337350008", "13122413470032", "180625328945008", "10012109542729"]
         },
         {   # Pop -------------------------------------------------------
             'name' : 'Taylor Swift',
@@ -236,7 +288,7 @@ def addArtist():
         },{
             'name' : 'The Beatles',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : ["07080112173928"]
+            'products' : ["07080112173928", "04042010374818"]
         },{
             'name' : 'ABBA',
             'genre' : Genre.objects.get(name = "Pop"),
