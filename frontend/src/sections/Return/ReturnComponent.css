@@ -64,3 +64,37 @@
     background-color: #0061c9; /* Darker blue on hover */
     transform: translateY(-2px);
 }
+
+.loading-gear{
+    position: fixed; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: orange; 
+    text-align: center; 
+    z-index: 1000; 
+    padding: 20px; 
+    border-radius: 8px; 
+}
+
+.filter-section {
+    text-align: left;
+    margin-bottom: 20px; /* Adds space below the filter section */
+    color: white;
+    margin-left: 20px;
+}
+
+.filter-section label {
+    font-weight: bold; 
+    display: block; /* Ensures it takes full width */
+    margin-bottom: 10px; /* Space between the label and slider */
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+input[type="range"] {
+    width: 10%; /* Full width of the container */
+    margin-top: 10px; /* Adds space above the slider */
+}

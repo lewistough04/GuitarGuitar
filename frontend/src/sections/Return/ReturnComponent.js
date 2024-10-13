@@ -8,6 +8,7 @@ function ReturnComponent(){
     const navigate = useNavigate();
     const [guitars, setGuitars] = useState([]);
     const [guitarIndex, setGuitarIndex] = useState(0);
+    const [maxPrice, setMaxPrice] = useState(2000);
 
     useEffect(() => {
         const fetchGuitars = async () => {
@@ -24,50 +25,78 @@ function ReturnComponent(){
     }, [location.state]);
 
     const nextGuitar = () => {
-        setGuitarIndex((prev) => (prev+1) % guitars.length);
-        console.log(guitarIndex)
-    }
-
-    const handleDivClick = () => {
-        const currentGuitar = guitars[guitarIndex];
-        const sku = currentGuitar.sku; // Assuming the SKU is a property in the current guitar object
-        const url = `https://www.guitarguitar.co.uk/product/${sku}`;
-        window.open(url, "_blank");
+        const filteredGuitars = guitars.filter(guitar => guitar.price <= maxPrice);
+        
+        setGuitarIndex((prevIndex) => (prevIndex + 1) % filteredGuitars.length);
+        console.log(guitarIndex);
     };
 
-    if (guitars.length === 0) {
-        return <div className="loading-gear">Loading gear...</div>;
-    }
+    const handleDivClick = () => {
+        const filteredGuitars = guitars.filter(guitar => guitar.price <= maxPrice);
 
-    const currentGuitar = guitars[guitarIndex];
+        if (filteredGuitars.length > 0) {
+            const currentGuitar = filteredGuitars[guitarIndex];
+            const sku = currentGuitar.sku; // Assuming the SKU is a property in the current guitar object
+            const url = `https://www.guitarguitar.co.uk/product/${sku}`;
+            window.open(url, "_blank");
+        }
+    };
 
-    return(
+    const filteredGuitars = guitars.filter(guitar => guitar.price <= maxPrice);
+
+    // if (filteredGuitars.length === 0) {
+    //     return <div className="loading-gear">Nothing found within this price range!</div>;
+    // }
+
+    const currentGuitar = filteredGuitars[guitarIndex % filteredGuitars.length];
+
+    return (
         <>
-        <div className="return-div" onClick={handleDivClick} style={{ cursor: 'pointer' }}>
-            <div>
-                <img
-                    src={currentGuitar.picture_main}
-                    className="guitar-image"
-                    alt={currentGuitar.item_name}
-                />
+            <div className="filter-section">
+                <label>
+                    Max Price: £{maxPrice} 
+                    <input
+                        type="range"
+                        min="0"
+                        max="2000"
+                        value={maxPrice}
+                        onChange={e => setMaxPrice(Number(e.target.value))}
+                    />
+                </label>
             </div>
 
-            <div className="guitar-text">
-                <h2>{currentGuitar.item_name}</h2>
-                <h4>
-                    {currentGuitar.price
-                        ? currentGuitar.price.toLocaleString(undefined, {
-                            style: "currency",
-                            currency: "GBP",
-                          })
-                        : "Price not available"}
-                </h4>
-                <p className="guitar-description">{currentGuitar.productDetail}</p>
+            {filteredGuitars.length === 0 ? (
+                <div className="loading-gear">No guitars found within this price range!</div>
+            ) : (
+                <div className="return-div" onClick={handleDivClick} style={{ cursor: 'pointer' }}>
+                    <div>
+                        <img
+                            src={currentGuitar.picture_main}
+                            className="guitar-image"
+                            alt={currentGuitar.item_name}
+                        />
+                    </div>
+
+                    <div className="guitar-text">
+                        <h2>{currentGuitar.item_name}</h2>
+                        <h4>
+                            {currentGuitar.price
+                                ? currentGuitar.price.toLocaleString(undefined, {
+                                    style: "currency",
+                                    currency: "GBP",
+                                  })
+                                : "Price not available"}
+                        </h4>
+                        <p className="guitar-description">{currentGuitar.productDetail}</p>
+                    </div>
+                </div>
+            )}
+
+            <div className="button-container">
+                <button className="next-button" onClick={nextGuitar} disabled={filteredGuitars.length === 0}>
+                    Next
+                </button>
             </div>
-        </div>
-        <div className="button-container">
-            <button className="next-button" onClick={nextGuitar}>Next</button>
-        </div>
         </>
     );
 }
