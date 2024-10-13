@@ -1,3 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App Container */
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif; /* Set a default font family */
+  background-color: #f0f0f0; /* Light background color for the entire app */
+  min-height: 100vh; /* Ensure the app covers full height */
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-start; /* Align items at the start of the container */
+  padding: 20px; /* Add some padding */
+}
+
+/* Global Styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #333; /* Dark color for headings */
+  margin: 10px 0; /* Margin for spacing between headings */
+}
+
+p {
+  color: #666; /* Softer color for paragraph text */
+  line-height: 1.5; /* Improve readability */
+  margin: 10px 0; /* Margin for spacing between paragraphs */
+}
+
+/* Buttons */
+button {
+  background-color: #007bff; /* Primary button color */
+  color: white; /* White text for contrast */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  margin: 5px; /* Margin around buttons */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Link Styles */
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Loading State */
+.loading-gear {
+  font-size: 1.5rem; /* Larger font for loading text */
+  color: #007bff; /* Primary color for visibility */
+  margin-top: 20px; /* Margin for spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+      padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  h1 {
+      font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  button {
+      font-size: 0.9rem; /* Adjust button font size */
+      padding: 8px 16px; /* Adjust padding */
+  }
 }

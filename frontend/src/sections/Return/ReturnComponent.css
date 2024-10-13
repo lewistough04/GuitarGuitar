@@ -8,16 +8,16 @@
     background-color: white;
     border-radius: 2%;
     display: flex;
+    flex-direction: column;
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
+    margin: 40px auto;
     transition: 250ms ease-in-out;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
 }
 
 .return-div:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .guitar-image {
@@ -53,6 +53,7 @@
     text-decoration: none #D1D5DB solid;
     text-decoration-thickness: auto;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    margin-top: auto;
 }
 
 .next-button:hover {
