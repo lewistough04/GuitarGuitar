@@ -62,6 +62,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'findyoursound.urls'
 
+CSRF_TRUSTED_ORIGINS = ['https://api.dyhtg.com', 'https://dyhtg.com']
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
