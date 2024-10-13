@@ -100,13 +100,7 @@ def addGear(data):
             'price' : 159.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/230126399454008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
-        }, { # Pop
-            
-            'sku': '08082816154628', # Ed Sheeran Guitar,
-            'item_name': 'Martin LX1E Little Martin',
-            'price': 515.00,
-            'picture_main': 'https://images.guitarguitar.co.uk/cdn/large/170/08082816154628f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70',
-        }, {
+        },{
             'sku' : '07080112173928', # The Beatles Guitar
             'item_name' : 'Epiphone Casino Vintage Sunburst',
             'price' : 629.00,
