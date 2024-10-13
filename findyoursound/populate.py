@@ -91,23 +91,27 @@ def addGear(data):
         { # Rock
             'sku' : '180430326802008', # Billy from Smashing Pumpkins
             'item_name' : 'Fender Player Stratocaster Buttercream Maple Fingerboard',
+            'category' : 'GUEG',
             'price' : 659.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/180430326802008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         }, {
             'sku' : '230126399454008', # Nirvana Guitar
             'item_name' : 'Squier Sonic Mustang 2 Tone Sunburst Maple Fingerboard',
+            'category' : 'GUEG',
             'price' : 159.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/230126399454008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
             'sku' : '07080112173928', # The Beatles Guitar
             'item_name' : 'Epiphone Casino Vintage Sunburst',
+            'category' : 'GUEG',
             'price' : 629.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/07080112173928f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
         },{
             'sku' : '170705312155008', # ABBA Guitar
             'item_name' : 'Hagstrom Fantomen White Gloss',
+            'category' : 'GUEG',
             'price' : 749.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/170705312155008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
             },
@@ -117,18 +121,21 @@ def addGear(data):
         {
             'sku' : '04122311202218', # Billy from Smashing Pumpkins
             'item_name' : 'Electro Harmonix Big Muff Pi',
+            'category' : 'PEDL',
             'price' : 89.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/04122311202218f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{ # Jazz
             'sku' : '240717426967008', # jazz guitar
             'item_name' : 'Ibanez PM3C Pat Metheny Signature Natural Amber Low Gloss',
+            'category' : 'GUEG',
             'price' : 1399.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/240717426967008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
             'sku' : '190319340838008', # ACDC Guitar
             'item_name' : 'Gibson SG Standard Heritage Cherry',
+            'category' : 'GUEG',
             'price' : 1399.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/190319340838008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
@@ -136,20 +143,42 @@ def addGear(data):
         { # Metal
             'sku' : '240430423245008', # Mettalica Guitar
             'item_name' : 'Epiphone Inspired by Gibson Custom Jimi Hendrix Love Drops Flying V',
+            'category' : 'GUEG',
             'price' : 1499.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/240430423245008f.jpg",
             
         },{ 
             'sku' : '221201397184008', # Polyphia Guitar
             'item_name' : 'Ibanez TOD10 Tim Henson Signature',
+            'category' : 'GUEG',
             'price' : 1469.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/221201397184008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
         },{
             'sku' : '191204352060008', # Van Halen Guitar
             'item_name' : 'EVH Striped Series Frankie',
+            'category' : 'GUEG',
             'price' : 1199.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/191204352060008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         }
+
+        # Cables
+        ,{
+            'sku' : '190125338539008',
+            'item_name' : 'Fender Professional Series 10ft Straight Instrument Cable, Black',
+            'category' : 'AC',
+            'price' : 15.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/190125338539008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+        {
+            'sku' : '220302382224027',
+            'item_name' : 'Ordo 10ft/3m Angled Instrument Cable',
+            'category' : 'AC',
+            'price' : 12.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/220302382224027f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+
+
+
     ]
     
     for row in extras:
