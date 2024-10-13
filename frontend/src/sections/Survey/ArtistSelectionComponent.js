@@ -12,7 +12,7 @@ function ArtistSelectionComponent() {
     useEffect(() => {
         const fetchArtists = async () => {
             try {
-                const response = await Axios.get(`http://localhost:8000/api/${genre}/artists/`);
+                const response = await Axios.get(`https://api.dyhtg.com/api/${genre}/artists/`);
                 setArtists(response.data);
                 console.log('Fetched artists:', response.data);
             } catch (error) {
@@ -40,7 +40,7 @@ function ArtistSelectionComponent() {
         if (selectedArtists.length > 0) {
             console.log("Selected artists before POST:", selectedArtists);
             try {
-                const response = await Axios.post('http://localhost:8000/api/gear/', {
+                const response = await Axios.post('https://api.dyhtg.com/api/gear/', {
                     artists: selectedArtists
                 });
                 console.log('Gear fetched from backend:', response.data);
