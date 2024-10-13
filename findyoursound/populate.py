@@ -54,18 +54,20 @@ def getJSON():
     "pickup_option",
     "shape_option",
     "created_at",
-    "picture_main",
+    "image_urls",
     "rating",
     "glasgow_quantity",
     "edinburgh_quantity",
     "newcastle_quantity"
     ]
 
-    for i in range(0, len(json_data)):
-        del json_data[i]['ProductDetail']
-        for j in range(0, len(oldFieldNames)):
-            json_data[i][newFieldNames[j]] = json_data[i][oldFieldNames[j]]
-            del json_data[i][oldFieldNames[j]]
+    field_mapping = dict(zip(oldFieldNames, newFieldNames))
+
+    transformed_data = []
+    for item in json_data:
+        new_item = {field_mapping[old_key]: value for old_key, value in item.items() if old_key in field_mapping}
+        transformed_data.append(new_item)
+    json_data = transformed_data
 
 
     return json_data
