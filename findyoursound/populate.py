@@ -174,6 +174,15 @@ def addGear(data):
             'price' : 349.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/130/04042010374818f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
+
+        {
+            'sku' : '15012010412032', # beatles bass
+            'item_name' : 'Rickenbacker 4003S Jetglo',
+            'category' : 'GUBA',
+            'price' : 2499.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/15012010412032f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+
         # Pedals
         {
             'sku' : '04122311202218',
@@ -248,6 +257,14 @@ def addGear(data):
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/11051614363558.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
 
+        # gig bags
+        {
+            'sku' : '220302382176027',
+            'item_name' : 'Ordo B-215-BG Premium 15mm Electric Bass Guitar Gig Bag',
+            'category' : 'ACC',
+            'price' : 49.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/220302382176027f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
 
 
 
@@ -288,7 +305,7 @@ def addArtist():
         },{
             'name' : 'The Beatles',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : ["07080112173928", "04042010374818"]
+            'products' : ["07080112173928", "04042010374818","220302382176027","15012010412032"]
         },{
             'name' : 'ABBA',
             'genre' : Genre.objects.get(name = "Pop"),
