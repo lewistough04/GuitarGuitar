@@ -9,6 +9,7 @@ function ReturnComponent(){
     const [guitars, setGuitars] = useState([]);
     const [guitarIndex, setGuitarIndex] = useState(0);
     const [maxPrice, setMaxPrice] = useState(2000);
+    const [selectedCategory, setSelectedCategory] = useState("")
 
     useEffect(() => {
         const fetchGuitars = async () => {
@@ -24,9 +25,13 @@ function ReturnComponent(){
         fetchGuitars();
     }, [location.state]);
 
+    const filteredGuitars = guitars.filter(guitar => {
+        const withinPriceRange = guitar.price <= maxPrice;
+        const matchesCategory = selectedCategory ? guitar.category === selectedCategory : true;
+        return withinPriceRange && matchesCategory;
+    });
+
     const nextGuitar = () => {
-        const filteredGuitars = guitars.filter(guitar => guitar.price <= maxPrice);
-        
         setGuitarIndex((prevIndex) => (prevIndex + 1) % filteredGuitars.length);
         console.log(guitarIndex);
     };
@@ -41,8 +46,6 @@ function ReturnComponent(){
             window.open(url, "_blank");
         }
     };
-
-    const filteredGuitars = guitars.filter(guitar => guitar.price <= maxPrice);
 
     // if (filteredGuitars.length === 0) {
     //     return <div className="loading-gear">Nothing found within this price range!</div>;
@@ -63,10 +66,22 @@ function ReturnComponent(){
                         onChange={e => setMaxPrice(Number(e.target.value))}
                     />
                 </label>
+                <label>
+                    Category:
+                    <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
+                        <option value="">All</option>
+                        <option value="GUBA">Bass Guitars</option>
+                        <option value="ACC">Acoustic Guitars</option>
+                        <option value="GUEG">Electric Guitars</option>
+                        <option value="GUAC">Guitar Accessories</option>
+                        <option value="PEDL">Pedals</option>
+                        <option value="AMP">Amps</option>
+                    </select>
+                </label>
             </div>
 
             {filteredGuitars.length === 0 ? (
-                <div className="loading-gear">No guitars found within this price range!</div>
+                <div className="loading-gear">No items found within these filters!</div>
             ) : (
                 <div className="return-div" onClick={handleDivClick} style={{ cursor: 'pointer' }}>
                     <div>

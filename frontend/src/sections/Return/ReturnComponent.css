@@ -95,6 +95,6 @@
 }
 
 input[type="range"] {
-    width: 10%; /* Full width of the container */
+    width: 150px; /* Full width of the container */
     margin-top: 10px; /* Adds space above the slider */
 }

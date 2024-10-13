@@ -4,6 +4,7 @@ import GenreComponent from './GenreComponent';
 import ArtistSelectionComponent from './ArtistSelectionComponent';
 import Landing from '../../Landing';
 import ReturnComponent from '../Return/ReturnComponent';
+import FooterComponent from '../Footer/FooterComponent';
 
 const ParentComponent = () => {
     return (

@@ -3,7 +3,6 @@ import Axios from "axios";
 import "./ArtistSelectionComponent.css";
 import { useNavigate, useParams } from 'react-router-dom';
 
-
 function ArtistSelectionComponent() {
     const { genre } = useParams();
     const [artists, setArtists] = useState([]); 
