@@ -33,8 +33,8 @@
 }
 
 .step-div {
-    flex: 1; /* Allow each step to take equal space */
-    margin: 0; /* Remove any margin between step divs */
+    flex: 1; 
+    margin: 0; 
     padding: 10px;
     background-color: #494949;
     text-align: center;
