@@ -22,12 +22,6 @@
     gap: 15px;
 }
 
-/* .genres-list li {
-    display: inline-block;
-    margin: 5px;
-    flex: auto;
-} */
-
 .genre-button {
     padding: 40px 80px;
     font-size: 1.2rem;

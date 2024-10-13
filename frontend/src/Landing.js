@@ -19,17 +19,17 @@ function Landing() {
 
                 <div className="step-div">
                     <h2 className="step-header">Step 1</h2>
-                    <h4 className="step-text">Enter the music genre you're interested in</h4>
+                    <h4 className="step-text">Pick a music genre you're interested in</h4>
                 </div>
 
                 <div className="step-div">
                     <h2 className="step-header">Step 2</h2>
-                    <h4 className="step-text">Choose some artists you like the sound of</h4>
+                    <h4 className="step-text">Choose your favourite artists</h4>
                 </div>
 
                 <div className="step-div">
                     <h2 className="step-header">Step 3</h2>
-                    <h4 className="step-text">View guitars recommended by you</h4>
+                    <h4 className="step-text">View equipment recommended for you</h4>
                 </div>
             </div>
         </body>

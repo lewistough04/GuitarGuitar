@@ -70,7 +70,7 @@ function ArtistSelectionComponent() {
                 ))}
             </ul>
             <div className="button-container">
-                <button className="button prev-page" onClick={() => navigate('/')}>Go Back</button>
+                <button className="button prev-page" onClick={() => navigate('/main')}>Go Back</button>
                 <button className="button next-page" onClick={handleNext}>Finish</button>
             </div>
         </div>

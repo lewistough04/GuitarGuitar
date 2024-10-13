@@ -23,7 +23,7 @@
 }
 
 .artist-button {
-    padding: 20px 40px; /* Adjusted padding for buttons */
+    padding: 20px 40px; 
     font-size: 1.2rem;
     background-color: #f0f0f0;
     border: 2px solid #ccc;
@@ -46,7 +46,8 @@
 .button-container {
     display: flex;
     justify-content: space-between; 
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .button {

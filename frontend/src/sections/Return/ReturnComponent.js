@@ -1,10 +1,11 @@
 import "./ReturnComponent.css"
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Axios from "axios";
 
 function ReturnComponent(){
     const location = useLocation();
+    const navigate = useNavigate();
     const [guitars, setGuitars] = useState([]);
     const [guitarIndex, setGuitarIndex] = useState(0);
 
@@ -27,6 +28,13 @@ function ReturnComponent(){
         console.log(guitarIndex)
     }
 
+    const handleDivClick = () => {
+        const currentGuitar = guitars[guitarIndex];
+        const sku = currentGuitar.sku; // Assuming the SKU is a property in the current guitar object
+        const url = `https://www.guitarguitar.co.uk/product/${sku}`;
+        window.open(url, "_blank");
+    };
+
     if (guitars.length === 0) {
         return <div className="loading-gear">Loading gear...</div>;
     }
@@ -35,10 +43,10 @@ function ReturnComponent(){
 
     return(
         <>
-        <div className="return-div">
+        <div className="return-div" onClick={handleDivClick} style={{ cursor: 'pointer' }}>
             <div>
                 <img
-                    src={currentGuitar.image_urls}
+                    src={currentGuitar.picture_main}
                     className="guitar-image"
                     alt={currentGuitar.item_name}
                 />
@@ -57,7 +65,9 @@ function ReturnComponent(){
                 <p className="guitar-description">{currentGuitar.productDetail}</p>
             </div>
         </div>
-        <button className="next-button" onClick={nextGuitar}>Next</button>
+        <div className="button-container">
+            <button className="next-button" onClick={nextGuitar}>Next</button>
+        </div>
         </>
     );
 }

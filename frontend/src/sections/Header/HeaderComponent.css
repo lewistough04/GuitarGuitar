@@ -11,9 +11,9 @@
 }
 
 .App-logo {
-  height: 80%; /* Adjust logo height */
-  width: 100%; /* Maintain aspect ratio */
-  pointer-events: none; /* Disable interactions */
+  height: 80%; 
+  width: 100%; 
+  pointer-events: none; 
 }
 
 /* Link Styles */

@@ -9,11 +9,13 @@
     border-radius: 2%;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 50%;
     margin: 40px auto;
     transition: 250ms ease-in-out;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 20px;
+    flex-grow: 1;
+    align-items: center;
 }
 
 .return-div:hover {
@@ -27,7 +29,7 @@
 }
 
 .guitar-text {
-    text-align: left;
+    text-align: center;
     padding: 20px;
     color: orange;
 }
@@ -35,6 +37,16 @@
 .guitar-description {
     padding-top: 10px;
     color: #282c34;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns button to the right */
+    padding: 10px 20px; /* Optional padding */
+    position: fixed; /* Fixes the button to the bottom */
+    bottom: 20px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
+    width: calc(100% - 40px); /* Full width minus margins */
 }
 
 .next-button {
@@ -45,10 +57,10 @@
     color: #111827;
     cursor: pointer;
     padding: 2px 24px;
-    font-size: .875rem;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.25rem;
-    padding: .75rem 1rem;
+    padding: 1rem 1.5rem;
     text-align: center;
     text-decoration: none #D1D5DB solid;
     text-decoration-thickness: auto;
