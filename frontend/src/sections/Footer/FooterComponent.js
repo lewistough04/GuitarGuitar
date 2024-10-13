@@ -2,7 +2,9 @@ import './FooterComponent.css';
 
 function FooterComponent() {
     return (
-        <footer>2024 - DYHTG Hackathon GuitarGuitar Challenge</footer>
+        <footer className="footer">
+            <p>2024 - DYHTG Hackathon GuitarGuitar Challenge</p>
+        </footer>
     );
 }
 

@@ -44,30 +44,23 @@
     justify-content: flex-end; /* Aligns button to the right */
     padding: 10px 20px; /* Optional padding */
     position: fixed; /* Fixes the button to the bottom */
-    bottom: 20px; /* Distance from bottom */
-    right: 20px; /* Distance from right */
-    width: calc(100% - 40px); /* Full width minus margins */
+    bottom: 12%; /* Distance from bottom */
+    right: 10px; /* Distance from right */
+    width: calc(100% - 10px); /* Full width minus margins */
 }
 
 .next-button {
-    border: 1px solid rgb(209,213,219);
-    border-radius: .5rem;
-    margin-bottom: 10px;
-    background-color: #FAF9F6;
-    color: #111827;
-    cursor: pointer;
-    padding: 2px 24px;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.25rem;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    text-decoration: none #D1D5DB solid;
-    text-decoration-thickness: auto;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    margin-top: auto;
+    padding: 15px 30px; /* Same padding as .button */
+    font-size: 1.5rem; /* Same font size as .button */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color for contrast */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Same border radius */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .next-button:hover {
-    background-color: #fff;
+    background-color: #0061c9; /* Darker blue on hover */
+    transform: translateY(-2px);
 }
