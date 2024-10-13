@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Landing.css"
-import logoImage from './assets/media/monkey-wizard.png'
+import logoImage from './assets/monkey-wizard.png'
 
 function Landing() {
 
