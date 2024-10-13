@@ -55,7 +55,7 @@ def getJSON():
     "pickup_option",
     "shape_option",
     "created_at",
-    "image_urls",
+    "picture_main",
     "rating",
     "glasgow_quantity",
     "edinburgh_quantity",
@@ -88,37 +88,47 @@ def addGear(data):
         price"""
         
     extras = [
-        {
+        { # Rock
             'sku' : '180430326802008', # Billy from Smashing Pumpkins
             'item_name' : 'Fender Player Stratocaster Buttercream Maple Fingerboard',
             'price' : 659.00,
-            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/180430326802008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/180430326802008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
             'sku' : '04122311202218', # Billy from Smashing Pumpkins
             'item_name' : 'Electro Harmonix Big Muff Pi',
             'price' : 89.00,
-            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/04122311202218f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/04122311202218f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
-        },{
+        },{ # Jazz
             'sku' : '240717426967008', # jazz guitar
             'item_name' : 'Ibanez PM3C Pat Metheny Signature Natural Amber Low Gloss',
             'price' : 1399.00,
-            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/240717426967008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/240717426967008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },{
             'sku' : '190319340838008', # ACDC Guitar
             'item_name' : 'Gibson SG Standard Heritage Cherry',
             'price' : 1399.00,
-            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/150/190319340838008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/190319340838008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
             
         },
-        {
+        { # Metal
             'sku' : '240430423245008', # Mettalica Guitar
             'item_name' : 'Epiphone Inspired by Gibson Custom Jimi Hendrix Love Drops Flying V',
             'price' : 1499.00,
-            'image_urls' : "https://images.guitarguitar.co.uk/cdn/large/170/240430423245008f.jpg",
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/240430423245008f.jpg",
             
+        },{ 
+            'sku' : '221201397184008', # Polyphia Guitar
+            'item_name' : 'Ibanez TOD10 Tim Henson Signature',
+            'price' : 1469.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/221201397184008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },{
+            'sku' : '191204352060008', # Van Halen Guitar
+            'item_name' : 'EVH Striped Series Frankie',
+            'price' : 1199.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/191204352060008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         }
     ]
     
@@ -131,6 +141,7 @@ def addArtist():
     
     artists = [
         {
+            # Rock
             'name' : 'The Smashing Pumpkins',
             'genre' : Genre.objects.get(name = "Rock"),
             'products' : Gear.objects.get(sku = "180430326802008")
@@ -139,33 +150,44 @@ def addArtist():
             'name' : 'AC/DC',
             'genre' : Genre.objects.get(name = "Rock"),
             'products' : Gear.objects.get(sku = "190319340838008")
+        },{
+            'name' : 'Nirvana',
+            'genre' : Genre.objects.get(name = "Rock"),
+            'products' : Gear.objects.get(sku = "230126399456008")
         },
-        {
+        {   # Pop -------------------------------------------------------
             'name' : 'Taylor Swift',
             'genre' : Genre.objects.get(name = "Pop"),
             'products' : Gear.objects.get(sku = "190718346269008")
         },
-        {
+        {   # Classical --------------------------------------------------
             'name' : 'John Williams',
             'genre' : Genre.objects.get(name = "Classical"),
             'products' : Gear.objects.get(sku = "09071411013328")
-        },
-        {
+        },{  # Jazz --------------------------------------------------------
             'name' : 'Pat Metheny',
             'genre' : Genre.objects.get(name = "Jazz"),
             'products' : Gear.objects.get(sku = "240717426967008")
-        },
-        {
+        },{ # Metal --------------------------------------------------------
             'name' : 'Mettalica',
             'genre' : Genre.objects.get(name = "Metal"),
             'products' : Gear.objects.get(sku = "240430423245008")
-        },
-        {
+        },{
             'name' : 'Black Sabbath',
             'genre' : Genre.objects.get(name = "Metal"),
             'products' : Gear.objects.get(sku = "190319340838008")
-        }
+        },{
+            'name': 'Polyphia',
+            'genre': Genre.objects.get(name = "Metal"),
+            'products': Gear.objects.get(sku ="221201397184008"),
+        },{
+            'name': 'Van Halen',
+            'genre': Genre.objects.get(name = "Metal"),
+            'products': Gear.objects.get(sku ="191204352060008"),
+        }  
     ]
+    
+    
     for artist in artists:
         Artist.objects.get_or_create(**artist)
 
