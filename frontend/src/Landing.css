@@ -40,9 +40,10 @@ body {
     flex: 1; /* Allow each step to take equal space */
     margin: 0; /* Remove any margin between step divs */
     padding: 10px;
-    background-color: #333;
+    background-color: #494949;
     text-align: center;
     border: 1px solid black;
+    color: rgb(189, 123, 0);
 }
 
 .lander-image-container {
