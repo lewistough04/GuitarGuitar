@@ -431,7 +431,7 @@ def addArtist():
         },{
             'name' : 'Vulfpeck',
             'genre' : Genre.objects.get(name = "Jazz"),
-            'products' : ["200723360507025",]
+            'products' : ["200723360507025", '240805427735020']
             },
         { # Metal --------------------------------------------------------
             'name' : 'Metallica',
