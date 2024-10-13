@@ -173,7 +173,7 @@ def addArtist():
         },{
             'name' : 'Nirvana',
             'genre' : Genre.objects.get(name = "Rock"),
-            'products' : Gear.objects.get(sku = "230126399456008")
+            'products' : Gear.objects.get(sku = "230126399454008")
         },
         {   # Pop -------------------------------------------------------
             'name' : 'Taylor Swift',
