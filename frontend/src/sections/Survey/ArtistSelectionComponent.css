@@ -38,7 +38,7 @@
 }
 
 .artist-button.selected {
-    background-color: orange; /* Match genre button style */
+    background-color: orange; 
     color: black;
     border-color: orange;
 }

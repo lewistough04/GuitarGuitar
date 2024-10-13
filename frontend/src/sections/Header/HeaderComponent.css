@@ -1,13 +1,13 @@
 .App-header {
   background-color: #282c34; 
   min-height: 10vh; 
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  padding: 10px 0; /* Add padding for spacing */
-  font-size: calc(10px + 2vmin); /* Responsive font size */
-  color: white; /* White text color */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px 0;
+  font-size: calc(10px + 2vmin);
+  color: white; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .App-logo {
@@ -16,14 +16,12 @@
   pointer-events: none; 
 }
 
-/* Link Styles */
 .App-link {
-  color: #61dafb; /* Link color for visibility */
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s; /* Smooth transition for color changes */
+  color: #61dafb; 
+  text-decoration: none; 
+  transition: color 0.3s; 
 }
 
-/* Hover Effect for Link */
 .App-link:hover {
-  color: #21a1f1; /* Slightly darker blue on hover */
+  color: #21a1f1;
 }
