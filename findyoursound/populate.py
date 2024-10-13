@@ -194,13 +194,35 @@ def addGear(data):
         },
 
         {
-            'sku' : '15012010412032', # beatles bass
+            'sku' : '15012010412032',
             'item_name' : 'Rickenbacker 4003S Jetglo',
             'category' : 'GUBA',
             'price' : 2499.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/15012010412032f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
 
+        {
+            'sku' : '200723360507025',
+            'item_name' : 'Fender American Professional II Jazz Bass 3 Tone Sunburst Rosewood Fingerboard',
+            'category' : 'GUBA',
+            'price' : 1599.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/200723360507025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+
+        {
+            'sku' : '190110337359008',
+            'item_name' : 'Squier Classic Vibe 60s Jazz Bass 3 Tone Sunburst Indian Laurel Fingerboard',
+            'category' : 'GUBA',
+            'price' : 389.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/190110337359008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+         {
+            'sku' : '200723360490025',
+            'item_name' : 'Fender American Professional II Precision Bass 3 Tone Sunburst Rosewood Fingerboard',
+            'category' : 'GUBA',
+            'price' : 1599.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/200723360490025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
         # Pedals
         {
             'sku' : '04122311202218',
@@ -297,6 +319,14 @@ def addGear(data):
             'price' : 49.99,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/220302382176027f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
+        # strings
+        {
+            'sku' : '05020915553318',
+            'item_name' : 'DAddario EJ46 Pro Arte High Tension Classical Strings',
+            'category' : 'ACC',
+            'price' : 14.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/05020915553318f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
 
 
 
@@ -341,13 +371,13 @@ def addArtist():
         },{
             'name' : 'ABBA',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : ["170705312155008"]
+            'products' : ["170705312155008", "200723360507025", "190110337359008"]
         },
         
         {   # Classical --------------------------------------------------
             'name' : 'John Williams',
             'genre' : Genre.objects.get(name = "Classical"),
-            'products' : ["09071411013328"]
+            'products' : ["09071411013328", "05020915553318"]
         },{  # Jazz --------------------------------------------------------
             'name' : 'Pat Metheny',
             'genre' : Genre.objects.get(name = "Jazz"),
@@ -359,7 +389,7 @@ def addArtist():
         },{
             'name' : 'Black Sabbath',
             'genre' : Genre.objects.get(name = "Metal"),
-            'products' : ["190319340838008"]
+            'products' : ["190319340838008", "200723360490025"]
         },{
             'name': 'Polyphia',
             'genre': Genre.objects.get(name = "Metal"),
