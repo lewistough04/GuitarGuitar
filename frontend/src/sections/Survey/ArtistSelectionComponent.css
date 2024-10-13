@@ -1,0 +1,76 @@
+.main-div {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background-color: #282c34;
+    border-radius: 10px; 
+}
+
+.survey-title {
+    color: orange;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.artists-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.artist-button {
+    padding: 20px 40px; /* Adjusted padding for buttons */
+    font-size: 1.2rem;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.artist-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.artist-button.selected {
+    background-color: orange; /* Match genre button style */
+    color: black;
+    border-color: orange;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 30px;
+}
+
+.button {
+    padding: 15px 30px; 
+    font-size: 1.5rem;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0061c9;
+    transform: translateY(-2px);
+}
+
+.next-page {
+    justify-self: flex-start;
+    min-width: 10%;
+}
+
+.prev-page {
+    justify-self: flex-end;
+    min-width: 10%;
+}

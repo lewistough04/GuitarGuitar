@@ -24,6 +24,10 @@ function ArtistSelectionComponent() {
         fetchArtists(); // Call the fetch function
     }, [genre]);
 
+    useEffect(() => {
+        console.log("Selected artists: ", selectedArtists);
+    }, [selectedArtists]);
+
     const handleArtistChange = (artistName) => {
         setSelectedArtists(prevSelected => 
             prevSelected.includes(artistName)
@@ -35,11 +39,13 @@ function ArtistSelectionComponent() {
 
     const handleNext = async () => {
         if (selectedArtists.length > 0) {
+            console.log("Selected artists before POST:", selectedArtists);
             try {
-                const response = await Axios.put('http://localhost:8000/api/selected-artists/', {
+                const response = await Axios.post('http://localhost:8000/api/gear/', {
                     artists: selectedArtists
                 });
-                console.log('PUT response:', response.data);
+                console.log('Gear fetched from backend:', response.data);
+                navigate('/return', { state: { artists: selectedArtists, gear: response.data } });
             } catch (error) {
                 console.error("Error submitting artists:", error);
             }

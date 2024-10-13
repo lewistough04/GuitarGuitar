@@ -1,0 +1,29 @@
+#welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome-header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#start-button {
+    margin-top: 30px;
+    padding: 5px 10px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.steps-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.step-div {
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+}
