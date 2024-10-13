@@ -12,7 +12,7 @@ function GenreComponent({ onNext }){
     useEffect(() => {
         const fetchGenres = async () => {
             try {
-                const response = await Axios.get('http://localhost:8000/api/genres/');
+                const response = await Axios.get('https://api.dyhtg.com/api/genres/');
                 setGenres(response.data);
             } catch (error) {
                 console.error("Error fetching genres:", error);

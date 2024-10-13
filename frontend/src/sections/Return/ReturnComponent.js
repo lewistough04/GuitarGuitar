@@ -14,7 +14,7 @@ function ReturnComponent(){
         const fetchGuitars = async () => {
             try {
                 const artistNames = location.state?.artists || []; 
-                const response = await Axios.post("http://localhost:8000/api/gear/", { artists: artistNames });
+                const response = await Axios.post("https://api.dyhtg.com/api/gear/", { artists: artistNames });
                 setGuitars(response.data);
             } catch (error) {
                 console.error("Error fetching guitar data:", error);
