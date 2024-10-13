@@ -24,6 +24,10 @@ function ArtistSelectionComponent() {
         fetchArtists(); // Call the fetch function
     }, [genre]);
 
+    useEffect(() => {
+        console.log("Selected artists: ", selectedArtists);
+    }, [selectedArtists]);
+
     const handleArtistChange = (artistName) => {
         setSelectedArtists(prevSelected => 
             prevSelected.includes(artistName)
@@ -35,6 +39,7 @@ function ArtistSelectionComponent() {
 
     const handleNext = async () => {
         if (selectedArtists.length > 0) {
+            console.log("Selected artists before POST:", selectedArtists);
             try {
                 const response = await Axios.post('http://localhost:8000/api/gear/', {
                     artists: selectedArtists

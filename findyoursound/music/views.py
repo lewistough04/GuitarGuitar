@@ -43,7 +43,12 @@ class ArtistGearView(APIView):
         artist_names = request.data.get("artists", [])
         if artist_names:
             artists = Artist.objects.filter(name__in=artist_names)
-            gear_set = Gear.objects.filter(uses__in=artists).distinct()
-            serializer = GearSerializer(gear_set, many=True)
-            return Response(serializer.data)
-        return Response({"error": "Invalid genre"}, status=400)
+            if artists.exists():
+                gear_set = Gear.objects.filter(uses__in=artists).distinct()
+                
+                serializer = GearSerializer(gear_set, many=True)
+                
+                return Response(serializer.data)
+            else:
+                return Response({"error": "No artists found with those names"}, status=404)
+        return Response({"error": "No artist names provided"}, status=400)
