@@ -166,6 +166,16 @@ def addGear(data):
             'price' : 1199.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/191204352060008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
+        #acoustic guitars
+        {
+            'sku' : '191216352602008', 
+            'item_name' : 'Epiphone Masterbilt Texan Antique Natural Aged Gloss',
+            'category' : 'GUAG',
+            'price' : 799.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/191216352602008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+
+
         # bass
 
         {
@@ -306,7 +316,7 @@ def addArtist():
         },{
             'name' : 'The Beatles',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : ["07080112173928", "04042010374818","220302382176027","15012010412032"]
+            'products' : ["07080112173928", "04042010374818","220302382176027","15012010412032", "191216352602008"]
         },{
             'name' : 'ABBA',
             'genre' : Genre.objects.get(name = "Pop"),
