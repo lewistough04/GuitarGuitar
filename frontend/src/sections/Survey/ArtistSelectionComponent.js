@@ -36,10 +36,11 @@ function ArtistSelectionComponent() {
     const handleNext = async () => {
         if (selectedArtists.length > 0) {
             try {
-                const response = await Axios.put('http://localhost:8000/api/selected-artists/', {
+                const response = await Axios.post('http://localhost:8000/api/gear/', {
                     artists: selectedArtists
                 });
-                console.log('PUT response:', response.data);
+                console.log('Gear fetched from backend:', response.data);
+                navigate('/return', { state: { gear: response.data } });
             } catch (error) {
                 console.error("Error submitting artists:", error);
             }

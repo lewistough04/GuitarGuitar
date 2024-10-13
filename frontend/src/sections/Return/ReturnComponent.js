@@ -1,5 +1,6 @@
 import "./ReturnComponent.css"
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function ReturnComponent(){
 
@@ -54,8 +55,8 @@ function ReturnComponent(){
 
     // assume i am getting from api and returns in format 
     // array of dictionaries
-    const url = ""
-    const [guitar, setGuitar] = useState([]);
+    const location = useLocation();
+    //const guitars = location.state?.gear || [];
     const [guitarIndex, setGuitarIndex] = useState(0);
 
     const nextGuitar = () => {
@@ -63,6 +64,11 @@ function ReturnComponent(){
         console.log(guitarIndex)
     }
 
+    if (guitars.length === 0) {
+        return <div>No gear available.</div>;
+    }
+
+    const currentGuitar = guitars[guitarIndex];
     //const fetchGuitars = async () => {
       //  const res = await fetch(url);
         //const d = await res.json();
@@ -76,14 +82,25 @@ function ReturnComponent(){
     return(
         <div className="return-div">
             <div>
-                <img src={guitars[guitarIndex].PictureMain} className="guitar-image" alt={guitars[guitarIndex].ItemName}></img>
+                <img
+                    src={currentGuitar.PictureMain}
+                    className="guitar-image"
+                    alt={currentGuitar.ItemName}
+                />
                 <button className="next-button" onClick={nextGuitar}>Next</button>
             </div>
 
             <div className="guitar-text">
-                <h2>{guitars[guitarIndex].ItemName}</h2>
-                <h4>{guitars[guitarIndex].SalesPrice.toLocaleString(undefined, {style: "currency", currency: "GBP"})}</h4>
-                <p className="guitar-description">{guitars[guitarIndex].ProductDetail}</p>
+                <h2>{currentGuitar.ItemName}</h2>
+                <h4>
+                    {currentGuitar.SalesPrice
+                        ? currentGuitar.SalesPrice.toLocaleString(undefined, {
+                            style: "currency",
+                            currency: "GBP",
+                          })
+                        : "Price not available"}
+                </h4>
+                <p className="guitar-description">{currentGuitar.ProductDetail}</p>
             </div>
         </div>
     );
