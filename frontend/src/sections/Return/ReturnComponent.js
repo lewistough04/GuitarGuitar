@@ -31,6 +31,10 @@ function ReturnComponent(){
         return withinPriceRange && matchesCategory;
     });
 
+    const handleRestart = () => {
+        navigate('/');
+    };
+
     const nextGuitar = () => {
         setGuitarIndex((prevIndex) => (prevIndex + 1) % filteredGuitars.length);
         console.log(guitarIndex);
@@ -55,29 +59,32 @@ function ReturnComponent(){
 
     return (
         <>
-            <div className="filter-section">
-                <label>
-                    Max Price: £{maxPrice} 
-                    <input
-                        type="range"
-                        min="0"
-                        max="2000"
-                        value={maxPrice}
-                        onChange={e => setMaxPrice(Number(e.target.value))}
-                    />
-                </label>
-                <label>
-                    Category:
-                    <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
-                        <option value="">All</option>
-                        <option value="GUBA">Bass Guitars</option>
-                        <option value="ACC">Acoustic Guitars</option>
-                        <option value="GUEG">Electric Guitars</option>
-                        <option value="GUAC">Guitar Accessories</option>
-                        <option value="PEDL">Pedals</option>
-                        <option value="AMP">Amps</option>
-                    </select>
-                </label>
+            <div className="filter-and-button-container">
+                <div className="filter-section">
+                    <label>
+                        Max Price: £{maxPrice} 
+                        <input
+                            type="range"
+                            min="0"
+                            max="2000"
+                            value={maxPrice}
+                            onChange={e => setMaxPrice(Number(e.target.value))}
+                        />
+                    </label>
+                    <label>
+                        Category:
+                        <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
+                            <option value="">All</option>
+                            <option value="GUBA">Bass Guitars</option>
+                            <option value="ACC">Accessories</option>
+                            <option value="GUEG">Electric Guitars</option>
+                            <option value="GUAG">Acoustic Guitars</option>
+                            <option value="PEDL">Pedals</option>
+                            <option value="AMP">Amps</option>
+                        </select>
+                    </label>
+                </div>
+                    <button onClick={handleRestart} className="restart-button">Start Again!</button>
             </div>
 
             {filteredGuitars.length === 0 ? (

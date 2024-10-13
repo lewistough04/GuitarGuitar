@@ -41,27 +41,27 @@
 
 .button-container {
     display: flex;
-    justify-content: flex-end; /* Aligns button to the right */
-    padding: 10px 20px; /* Optional padding */
-    position: fixed; /* Fixes the button to the bottom */
-    bottom: 12%; /* Distance from bottom */
-    right: 10px; /* Distance from right */
-    width: calc(100% - 10px); /* Full width minus margins */
+    justify-content: flex-end; 
+    padding: 10px 20px; 
+    position: fixed; 
+    bottom: 12%; 
+    right: 10px; 
+    width: calc(100% - 10px); 
 }
 
 .next-button {
-    padding: 15px 30px; /* Same padding as .button */
-    font-size: 1.5rem; /* Same font size as .button */
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text color for contrast */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 8px; /* Same border radius */
+    padding: 15px 30px; 
+    font-size: 1.5rem; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 8px; 
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .next-button:hover {
-    background-color: #0061c9; /* Darker blue on hover */
+    background-color: #0061c9; 
     transform: translateY(-2px);
 }
 
@@ -81,20 +81,46 @@
 
 .filter-section {
     text-align: left;
-    margin-bottom: 20px; /* Adds space below the filter section */
+    margin-bottom: 20px; 
     color: white;
     margin-left: 20px;
 }
 
 .filter-section label {
     font-weight: bold; 
-    display: block; /* Ensures it takes full width */
-    margin-bottom: 10px; /* Space between the label and slider */
+    display: block; 
+    margin-bottom: 10px; 
     margin-top: 20px;
     font-size: 1.5rem;
 }
 
 input[type="range"] {
-    width: 150px; /* Full width of the container */
-    margin-top: 10px; /* Adds space above the slider */
+    width: 150px; 
+    margin-top: 10px; 
+}
+
+.filter-and-button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+.restart-button{
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.restart-button:hover{
+    background-color: #0061c9;
+    transform: translateY(-2px);
 }
