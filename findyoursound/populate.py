@@ -176,7 +176,27 @@ def addGear(data):
             'price' : 12.99,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/220302382224027f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
-        
+
+
+        #capos
+        {
+            'sku' : '221031395730025',
+            'item_name' : 'Dunlop Trigger Fly Capo Gun Metal',
+            'category' : 'ACC',
+            'price' : 19.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/221031395730025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+
+        # Picks
+        {
+            'sku' : '11051614363558',
+            'item_name' : 'Dunlop 471P3N Nylon Max Grip Jazz III Nylon 6/Play Pack',
+            'category' : 'ACC',
+            'price' : 5.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/11051614363558.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+
+
 
 
 
@@ -232,7 +252,7 @@ def addArtist():
             'genre' : Genre.objects.get(name = "Jazz"),
             'products' : Gear.objects.get(sku = "240717426967008")
         },{ # Metal --------------------------------------------------------
-            'name' : 'Mettalica',
+            'name' : 'Metallica',
             'genre' : Genre.objects.get(name = "Metal"),
             'products' : Gear.objects.get(sku = "240430423245008")
         },{
