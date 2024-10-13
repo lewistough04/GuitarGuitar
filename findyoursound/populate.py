@@ -175,6 +175,13 @@ def addGear(data):
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/191216352602008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
 
+        {
+            'sku' : '210111365922025', 
+            'item_name' : 'Gibson Hummingbird Standard Vintage Sunburst',
+            'category' : 'GUAG',
+            'price' : 3199.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/210111365922025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
 
         # bass
 
@@ -210,6 +217,20 @@ def addGear(data):
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/04052410171618f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
         },
 
+        {
+            'sku' : '211012375294025',
+            'item_name' : 'BOSS RC-600 Loop Station',
+            'category' : 'PEDL',
+            'price' : 459.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/211012375294025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
+        {
+            'sku' : '200930362584025',
+            'item_name' : 'BOSS RC-500 Loop Station',
+            'category' : 'PEDL',
+            'price' : 269.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/160/200930362584025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70",
+        },
         # Amps
         {
             'sku' : '180625328945008',
@@ -308,11 +329,11 @@ def addArtist():
         {   # Pop -------------------------------------------------------
             'name' : 'Taylor Swift',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : ["190718346269008"]
+            'products' : ["190718346269008", "210111365922025"]
         },{
             'name' : 'Ed Sheeran',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : ["08082816154628"]
+            'products' : ["08082816154628", "211012375294025", "200930362584025"]
         },{
             'name' : 'The Beatles',
             'genre' : Genre.objects.get(name = "Pop"),
