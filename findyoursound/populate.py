@@ -214,65 +214,73 @@ def addArtist():
             # Rock
             'name' : 'The Smashing Pumpkins',
             'genre' : Genre.objects.get(name = "Rock"),
-            'products' : Gear.objects.get(sku = "180430326802008")
+            'products' : ["180430326802008"]
         },
         {
             'name' : 'AC/DC',
             'genre' : Genre.objects.get(name = "Rock"),
-            'products' : Gear.objects.get(sku = "190319340838008")
+            'products' : ["190319340838008"]
         },{
             'name' : 'Nirvana',
             'genre' : Genre.objects.get(name = "Rock"),
-            'products' : Gear.objects.get(sku = "230126399454008")
+            'products' : ["230126399454008"]
         },
         {   # Pop -------------------------------------------------------
             'name' : 'Taylor Swift',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : Gear.objects.get(sku = "190718346269008")
+            'products' : ["190718346269008"]
         },{
             'name' : 'Ed Sheeran',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : Gear.objects.get(sku = "08082816154628")
+            'products' : ["08082816154628"]
         },{
             'name' : 'The Beatles',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : Gear.objects.get(sku = "07080112173928")
+            'products' : ["07080112173928"]
         },{
             'name' : 'ABBA',
             'genre' : Genre.objects.get(name = "Pop"),
-            'products' : Gear.objects.get(sku = "170705312155008")
+            'products' : ["170705312155008"]
         },
         
         {   # Classical --------------------------------------------------
             'name' : 'John Williams',
             'genre' : Genre.objects.get(name = "Classical"),
-            'products' : Gear.objects.get(sku = "09071411013328")
+            'products' : ["09071411013328"]
         },{  # Jazz --------------------------------------------------------
             'name' : 'Pat Metheny',
             'genre' : Genre.objects.get(name = "Jazz"),
-            'products' : Gear.objects.get(sku = "240717426967008")
+            'products' : ["240717426967008"]
         },{ # Metal --------------------------------------------------------
             'name' : 'Metallica',
             'genre' : Genre.objects.get(name = "Metal"),
-            'products' : Gear.objects.get(sku = "240430423245008")
+            'products' : ["240430423245008"]
         },{
             'name' : 'Black Sabbath',
             'genre' : Genre.objects.get(name = "Metal"),
-            'products' : Gear.objects.get(sku = "190319340838008")
+            'products' : ["190319340838008"]
         },{
             'name': 'Polyphia',
             'genre': Genre.objects.get(name = "Metal"),
-            'products': Gear.objects.get(sku ="221201397184008"),
+            'products': ["221201397184008"],
         },{
             'name': 'Van Halen',
             'genre': Genre.objects.get(name = "Metal"),
-            'products': Gear.objects.get(sku ="191204352060008"),
+            'products': ["191204352060008"]
         }  
     ]
     
     
-    for artist in artists:
-        Artist.objects.get_or_create(**artist)
+    for artist_data in artists:
+        # Get or create the artist
+        artist, created = Artist.objects.get_or_create(
+            name=artist_data['name'],
+            genre=artist_data['genre']
+        )
+        # Add products to the artist (multiple products now allowed)
+        for sku in artist_data['products']:
+            product = Gear.objects.get(sku=sku)
+            artist.products.add(product)
 
 def addGenre():
     genres= [
