@@ -176,6 +176,7 @@ def addGear(data):
             'price' : 12.99,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/220302382224027f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
+        
 
 
 
