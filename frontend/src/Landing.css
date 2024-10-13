@@ -1,3 +1,7 @@
+body {
+    height: 60vh;
+}
+
 #welcome {
     display: flex;
     flex-direction: column;
@@ -7,13 +11,22 @@
 #welcome-header {
     margin-top: 20px;
     text-align: center;
+    color: orange;
+    font-size: 40px;
 }
 
 #start-button {
     margin-top: 30px;
-    padding: 5px 10px;
-    border-radius: 10%;
+    padding: 10px 40px;
+    border-radius: 5%;
     text-align: center;
+    border: 3px solid orange;
+    transition: 250ms ease-in-out;
+    font-weight: bold;
+}
+
+#start-button:hover {
+    transform: scale(1.05);
 }
 
 .steps-section {
@@ -26,4 +39,5 @@
     padding: 10px;
     background-color: #333;
     text-align: center;
+    border: 1px solid black;
 }
