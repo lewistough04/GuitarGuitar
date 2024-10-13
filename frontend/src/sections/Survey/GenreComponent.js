@@ -49,7 +49,7 @@ function GenreComponent({ onNext }){
                 ))}
             </ul>
             <div className="button-container">
-                <button className="next-page" onClick={handleNext}>Next</button>
+                <button className="button next-page" onClick={handleNext}>Next</button>
             </div>
         </div>
     );

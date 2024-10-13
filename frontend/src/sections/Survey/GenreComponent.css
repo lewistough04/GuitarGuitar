@@ -56,7 +56,8 @@
 
 .button-container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: flex-end; 
+    width: 100%;
     margin-top: 30px;
 }
 
