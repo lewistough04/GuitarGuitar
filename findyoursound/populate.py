@@ -130,6 +130,13 @@ def addGear(data):
             'price' : 749.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/170705312155008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
             },
+        {
+            'sku' : '220614387522008',
+            'item_name' : 'Epiphone Noel Gallagher Riviera',
+            'category' : 'GUEG',
+            'price' : 799.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/220614387522008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+            },
         
         { # Jazz
             'sku' : '240717426967008', # jazz guitar
@@ -166,6 +173,13 @@ def addGear(data):
             'price' : 1199.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/191204352060008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
+        {
+            'sku' : '191216352722008',
+            'item_name' : 'Gibson Custom Shop 1959 ES-355 Reissue Stop Bar VOS Ebony',
+            'category' : 'GUEG',
+            'price' : 5649.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/191216352722008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
         #acoustic guitars
         {
             'sku' : '191216352602008', 
@@ -182,7 +196,13 @@ def addGear(data):
             'price' : 3199.00,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/210111365922025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
-
+        {
+            'sku' : '220803390407008', 
+            'item_name' : 'Gibson Hummingbird Faded Antique Natural',
+            'category' : 'GUAG',
+            'price' : 2949.00,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/220803390407008f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
         # bass
 
         {
@@ -301,6 +321,13 @@ def addGear(data):
             'price' : 19.99,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/170/221031395730025f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
+        {
+            'sku' : '13040811470467',
+            'item_name' : 'Shubb Capo C1 Nickel Steel String',
+            'category' : 'ACC',
+            'price' : 24.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/120/13040811470467f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
 
         # Picks
         {
@@ -325,6 +352,14 @@ def addGear(data):
             'item_name' : 'DAddario EJ46 Pro Arte High Tension Classical Strings',
             'category' : 'ACC',
             'price' : 14.99,
+            'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/05020915553318f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
+        },
+        # percussion
+        {
+            'sku' : '240904429060027',
+            'item_name' : 'Chord Tambourines Single D Black',
+            'category' : 'ACC',
+            'price' : 13.99,
             'picture_main' : "https://images.guitarguitar.co.uk/cdn/large/150/05020915553318f.jpg?h=500&maxwidth=770&scale=canvas&bg=ffffff&quality=70"
         },
 
@@ -355,6 +390,10 @@ def addArtist():
             'name' : 'Nirvana',
             'genre' : Genre.objects.get(name = "Rock"),
             'products' : ["230126399454008", "04052410171618", "190110337350008", "13122413470032", "180625328945008", "10012109542729"]
+        },{
+            'name' : 'Oasis',
+            'genre' : Genre.objects.get(name = "Rock"),
+            'products' : ["220803390407008", "240904429060027", "13040811470467", "221031395730025", "220614387522008", "191216352722008", "180625328945008", "10012109542729"]
         },
         {   # Pop -------------------------------------------------------
             'name' : 'Taylor Swift',
