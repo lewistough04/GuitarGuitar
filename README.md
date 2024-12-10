@@ -9,4 +9,6 @@ We then hosted the application through the use of AWS and this can be accessed a
 
 https://dyhtg.com
 
+** Currently the website is down**  We are working on getting it rehosted.
+
 Hope you enjoy using our prototype! :)
